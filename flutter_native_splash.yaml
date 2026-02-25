@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#F4F6FA"
+  image: assets/branding/upsc_logo.png
+  color_dark: "#0B111B"
+  image_dark: assets/branding/upsc_logo.png
+
+  android_12:
+    image: assets/branding/upsc_logo.png
+    icon_background_color: "#F4F6FA"
+    image_dark: assets/branding/upsc_logo.png
+    icon_background_color_dark: "#0B111B"
+
+  web: true
