@@ -50,6 +50,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ],
             ),
           ),
+          const SizedBox(height: 8),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Text(
+              'Daily News',
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: FilledButton.icon(
+              onPressed: () => context.push('/news'),
+              icon: const Icon(Icons.article_outlined),
+              label: const Text(
+                'News Basics (HT • TOI • Indian Express)',
+              ),
+            ),
+          ),
           SwitchListTile(
             title: const Text('Focus mode'),
             subtitle: const Text(

@@ -161,18 +161,18 @@ class _PyqTestScreenState extends State<PyqTestScreen> {
                           ),
                         ),
                       ),
-                      Row(
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
                         children: [
                           OutlinedButton(
                             onPressed: controller.clearSelectedOption,
                             child: const Text('Clear Response'),
                           ),
-                          const SizedBox(width: 8),
                           OutlinedButton(
                             onPressed: controller.previousQuestion,
                             child: const Text('Previous'),
                           ),
-                          const SizedBox(width: 8),
                           FilledButton(
                             onPressed: controller.nextQuestion,
                             child: const Text('Save & Next'),

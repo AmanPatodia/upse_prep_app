@@ -9,6 +9,7 @@ import '../features/dashboard/presentation/dashboard_screen.dart';
 import '../features/mains/presentation/mains_overview_screen.dart';
 import '../features/mcq/presentation/mcq_practice_screen.dart';
 import '../features/mcq/presentation/mock_test_screen.dart';
+import '../features/news/presentation/news_screen.dart';
 import '../features/prelims/presentation/prelims_overview_screen.dart';
 import '../features/pyq/presentation/pyq_result_screen.dart';
 import '../features/pyq/presentation/pyq_screen.dart';
@@ -59,6 +60,10 @@ GoRouter createAppRouter({required bool isLoggedIn}) {
               GoRoute(
                 path: '/dashboard',
                 builder: (context, state) => const DashboardScreen(),
+              ),
+              GoRoute(
+                path: '/news',
+                builder: (context, state) => const NewsScreen(),
               ),
             ],
           ),

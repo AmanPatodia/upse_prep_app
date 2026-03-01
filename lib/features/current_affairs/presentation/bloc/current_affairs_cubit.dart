@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/logging/app_logger.dart';
 import '../../data/current_affairs_repository.dart';
 import '../../domain/current_affairs_models.dart';
 
@@ -33,11 +34,21 @@ class CurrentAffairsCubit extends Cubit<CurrentAffairsState> {
   final CurrentAffairsRepository _repository;
 
   Future<void> load() async {
+    AppLogger.info('CurrentAffairsCubit', 'Loading current affairs...');
     emit(state.copyWith(isLoading: true, error: null));
     try {
       final items = await _repository.getDailyItems();
+      AppLogger.info(
+        'CurrentAffairsCubit',
+        'Loaded ${items.length} current affairs items',
+      );
       emit(state.copyWith(isLoading: false, items: items));
     } catch (e) {
+      AppLogger.error(
+        'CurrentAffairsCubit',
+        'Failed to load current affairs',
+        error: e,
+      );
       emit(state.copyWith(isLoading: false, error: e.toString()));
     }
   }
