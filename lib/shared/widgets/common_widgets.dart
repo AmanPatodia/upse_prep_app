@@ -50,10 +50,26 @@ class SectionHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleLarge),
-          if (action != null) action!,
+          Expanded(
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.titleLarge,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+          if (action != null) ...[
+            const SizedBox(width: 8),
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerRight,
+                child: action!,
+              ),
+            ),
+          ],
         ],
       ),
     );
@@ -67,22 +83,25 @@ class FocusModeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final background =
+        enabled ? scheme.primaryContainer : scheme.surfaceContainerHighest;
+    final foreground = enabled ? scheme.onPrimaryContainer : scheme.onSurfaceVariant;
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 250),
       curve: Curves.easeOut,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color:
-            enabled
-                ? Theme.of(context).colorScheme.primaryContainer
-                : Theme.of(context).colorScheme.surfaceContainerHighest,
+        color: background,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
         children: [
           Icon(
             enabled ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+            color: foreground,
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -90,6 +109,9 @@ class FocusModeBanner extends StatelessWidget {
               enabled
                   ? 'Focus Mode enabled: distractions reduced.'
                   : 'Focus Mode off: full app access.',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: foreground,
+              ),
             ),
           ),
         ],

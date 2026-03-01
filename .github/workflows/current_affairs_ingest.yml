@@ -1,0 +1,28 @@
+name: Current Affairs Ingest
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r tools/current_affairs/requirements.txt
+
+      - name: Run ingest job
+        env:
+          UPSC_API_BASE: ${{ secrets.UPSC_API_BASE }}
+          UPSC_API_KEY: ${{ secrets.UPSC_API_KEY }}
+        run: |
+          python tools/current_affairs/rss_ingest.py \
+            --api-base "$UPSC_API_BASE" \
+            --api-key "$UPSC_API_KEY"

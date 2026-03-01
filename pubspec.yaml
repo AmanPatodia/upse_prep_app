@@ -1,5 +1,5 @@
-name: upse_prep_app
-description: "Private UPSC preparation app with offline-first architecture and AI-assisted updates"
+name: ams_ias
+description: "UPSC preparation app with offline-first architecture and AI-assisted updates"
 publish_to: 'none'
 version: 1.0.0+1
 

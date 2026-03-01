@@ -47,7 +47,30 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   icon: const Icon(Icons.newspaper_outlined),
                   label: const Text('Current Affairs'),
                 ),
+                FilledButton.icon(
+                  onPressed: () => context.push('/settings'),
+                  icon: const Icon(Icons.settings_outlined),
+                  label: const Text('Settings'),
+                ),
               ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Text(
+              'Daily News',
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: FilledButton.icon(
+              onPressed: () => context.push('/news'),
+              icon: const Icon(Icons.article_outlined),
+              label: const Text(
+                'News Basics (HT • TOI • Indian Express)',
+              ),
             ),
           ),
           SwitchListTile(
