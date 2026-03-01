@@ -90,6 +90,7 @@ class PyqTestCatalogItem {
     required this.durationSeconds,
     required this.sourceName,
     required this.sourceUrl,
+    this.isOfficialAnswerKey = false,
   });
 
   final String testId;
@@ -100,6 +101,7 @@ class PyqTestCatalogItem {
   final int durationSeconds;
   final String sourceName;
   final String sourceUrl;
+  final bool isOfficialAnswerKey;
 }
 
 class PyqQuestionReview {

@@ -53,7 +53,9 @@ class _PyqScreenState extends State<PyqScreen> {
                   child: ListTile(
                     title: Text(test.title),
                     subtitle: Text(
-                      '${test.questionCount} questions • ${(test.durationSeconds / 60).toStringAsFixed(0)} mins\nType: ${test.paperType.name.toUpperCase()} • Source: ${test.sourceName}',
+                      '${test.questionCount} questions • ${(test.durationSeconds / 60).toStringAsFixed(0)} mins\n'
+                      'Type: ${test.paperType.name.toUpperCase()} • Source: ${test.sourceName}\n'
+                      'Answer Key: ${test.isOfficialAnswerKey ? 'Official' : 'Expert (Unofficial)'}',
                     ),
                     trailing: const Icon(Icons.play_arrow_outlined),
                     onTap: () {

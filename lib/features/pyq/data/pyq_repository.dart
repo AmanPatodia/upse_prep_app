@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
 import '../../../core/constants/app_constants.dart';
@@ -22,7 +25,7 @@ abstract class PyqRepository {
 }
 
 class DemoPyqRepository implements PyqRepository {
-  static const _bankKey = 'pyq_bank_v2';
+  static const _bankKey = 'pyq_bank_v4';
 
   static const _subjects = {
     'History': ['Modern India', 'Art and Culture'],
@@ -48,12 +51,86 @@ class DemoPyqRepository implements PyqRepository {
           .toList(growable: false);
     }
 
-    final seeded = _seedQuestions();
+    final imported = await _loadFromAsset();
+    final seeded = [
+      ..._seedQuestions(),
+      ...imported,
+    ];
     await _bankBox.put(
       _bankKey,
       seeded.map((e) => e.toMap()).toList(growable: false),
     );
     return seeded;
+  }
+
+  Future<List<PyqQuestion>> _loadFromAsset() async {
+    try {
+      final raw = await rootBundle.loadString('assets/data/pyqs.json');
+      final decoded = jsonDecode(raw);
+      if (decoded is! List) return const <PyqQuestion>[];
+      final items = <PyqQuestion>[];
+      for (final row in decoded.whereType<Map>()) {
+        final map = row.cast<String, dynamic>();
+        final year = (map['year'] as num?)?.toInt() ?? 0;
+        final subject = (map['subject']?.toString() ?? '').trim();
+        final question = (map['question']?.toString() ?? '').trim();
+        final options = (map['options'] as List<dynamic>? ?? [])
+            .map((e) => e.toString().trim())
+            .where((e) => e.isNotEmpty)
+            .toList(growable: false);
+        if (year == 0 || question.isEmpty || options.length < 2) continue;
+
+        final paperNumber = (map['paperNumber'] as num?)?.toInt() ?? 1;
+        final paperTypeRaw = (map['paperType']?.toString() ?? 'gs').toLowerCase();
+        final paperType =
+            paperTypeRaw == 'csat' ? PyqPaperType.csat : PyqPaperType.gs;
+        final qNo = (map['questionNumber'] as num?)?.toInt() ?? (items.length + 1);
+        final id = 'pyq-$year-${paperType.name}-$paperNumber-q$qNo';
+        final answerIndex = _parseAnswerToIndex(map['answer']);
+        final explanation = (map['explanation']?.toString() ?? '').trim();
+
+        items.add(
+          PyqQuestion(
+            id: id,
+            year: year,
+            paperType: paperType,
+            subject: subject.isEmpty ? 'General Studies' : subject,
+            chapter: (map['chapter']?.toString() ?? 'Paper $paperNumber').trim(),
+            question: question,
+            options: options,
+            correctIndex:
+                answerIndex >= 0 && answerIndex < options.length ? answerIndex : 0,
+            explanation:
+                explanation.isEmpty ? 'Answer key: Expert (Unofficial)' : explanation,
+            topicTag: (map['topicTag']?.toString() ?? 'PYQ').trim(),
+            difficulty: Difficulty.values.firstWhere(
+              (d) => d.name == (map['difficulty']?.toString() ?? 'medium'),
+              orElse: () => Difficulty.medium,
+            ),
+            isCurrentAffairsLinked:
+                map['isCurrentAffairsLinked'] as bool? ?? false,
+            sourceName: map['sourceName']?.toString() ?? 'Imported PYQ Dataset',
+            sourceUrl: map['sourceUrl']?.toString() ?? _sourceUrl,
+          ),
+        );
+      }
+      return items;
+    } catch (_) {
+      return const <PyqQuestion>[];
+    }
+  }
+
+  int _parseAnswerToIndex(Object? answer) {
+    if (answer is int) return answer;
+    final raw = (answer?.toString() ?? '').trim().toUpperCase();
+    if (raw.isEmpty) return 0;
+    final cleaned = raw.replaceAll(RegExp(r'[^A-E0-9-]'), '');
+    if (cleaned.isEmpty) return 0;
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+    if (letters.contains(cleaned)) return letters.indexOf(cleaned);
+    final asNum = int.tryParse(cleaned);
+    if (asNum == null) return 0;
+    return asNum > 0 ? asNum - 1 : asNum;
   }
 
   List<PyqQuestion> _seedQuestions() {
@@ -132,13 +209,13 @@ class DemoPyqRepository implements PyqRepository {
     final grouped = <String, List<PyqQuestion>>{};
 
     for (final q in items) {
-      final key = '${q.year}-${q.paperType.name}';
+      final key = _groupKeyFromQuestion(q);
       grouped.putIfAbsent(key, () => []).add(q);
     }
 
     final sortedKeys = grouped.keys.toList(growable: false)..sort((a, b) {
-      final ay = int.parse(a.split('-').first);
-      final by = int.parse(b.split('-').first);
+      final ay = _yearFromGroupKey(a);
+      final by = _yearFromGroupKey(b);
       if (ay != by) return by.compareTo(ay);
       return a.compareTo(b);
     });
@@ -149,22 +226,26 @@ class DemoPyqRepository implements PyqRepository {
         .map((entry) {
           final idx = entry.key + 1;
           final key = entry.value;
-          final parts = key.split('-');
-          final year = int.parse(parts[0]);
-          final paperType =
-              parts[1] == 'gs' ? PyqPaperType.gs : PyqPaperType.csat;
+          final year = _yearFromGroupKey(key);
+          final paperType = _paperTypeFromGroupKey(key);
+          final paperNumber = _paperNumberFromGroupKey(key);
           final questions = grouped[key]!;
-          final label =
-              paperType == PyqPaperType.gs ? 'GS Paper I' : 'CSAT Paper II';
+          final label = paperType == PyqPaperType.gs ? 'GS Paper I' : 'CSAT Paper II';
+          final title = paperNumber > 1
+              ? 'PYQ $paperNumber: $year $label'
+              : 'PYQ $idx: $year $label';
           return PyqTestCatalogItem(
-            testId: 'pyq-$year-${paperType.name}',
-            title: 'PYQ $idx: $year $label',
+            testId: 'pyq-$year-${paperType.name}-$paperNumber',
+            title: title,
             year: year,
             paperType: paperType,
             questionCount: questions.length,
             durationSeconds: 120 * 60,
-            sourceName: 'Vajiram & Ravi',
-            sourceUrl: _sourceUrl,
+            sourceName: questions.first.sourceName ?? 'PYQ Source',
+            sourceUrl: questions.first.sourceUrl ?? _sourceUrl,
+            isOfficialAnswerKey: questions.any(
+              (q) => q.explanation.toLowerCase().contains('official'),
+            ),
           );
         })
         .toList(growable: false);
@@ -172,7 +253,7 @@ class DemoPyqRepository implements PyqRepository {
 
   @override
   Future<PyqTestPaper> getTestById(String testId) async {
-    final match = RegExp(r'pyq-(\d{4})-(gs|csat)').firstMatch(testId);
+    final match = RegExp(r'pyq-(\d{4})-(gs|csat)(?:-(\d+))?').firstMatch(testId);
     if (match == null) {
       throw Exception('Invalid test id: $testId');
     }
@@ -180,10 +261,11 @@ class DemoPyqRepository implements PyqRepository {
     final year = int.parse(match.group(1)!);
     final paperType =
         match.group(2) == 'gs' ? PyqPaperType.gs : PyqPaperType.csat;
+    final paperNumber = int.tryParse(match.group(3) ?? '') ?? 1;
 
     final all = await _getBank();
     final selected = all
-        .where((q) => q.year == year && q.paperType == paperType)
+        .where((q) => _groupKeyFromQuestion(q) == '$year-${paperType.name}-$paperNumber')
         .take(100)
         .toList(growable: false);
 
@@ -197,11 +279,27 @@ class DemoPyqRepository implements PyqRepository {
 
     return PyqTestPaper(
       id: testId,
-      title: '$year $label',
+      title: paperNumber > 1 ? 'PYQ $paperNumber: $year $label' : '$year $label',
       durationSeconds: 120 * 60,
       questions: selected,
     );
   }
+
+  String _groupKeyFromQuestion(PyqQuestion q) {
+    final match = RegExp(r'^pyq-(\d{4})-(gs|csat)-(\d+)-q\d+$').firstMatch(q.id);
+    if (match != null) {
+      return '${match.group(1)}-${match.group(2)}-${match.group(3)}';
+    }
+    return '${q.year}-${q.paperType.name}-1';
+  }
+
+  int _yearFromGroupKey(String key) => int.parse(key.split('-')[0]);
+
+  PyqPaperType _paperTypeFromGroupKey(String key) =>
+      key.split('-')[1] == 'csat' ? PyqPaperType.csat : PyqPaperType.gs;
+
+  int _paperNumberFromGroupKey(String key) =>
+      int.tryParse(key.split('-')[2]) ?? 1;
 
   @override
   Future<PyqAttemptReport> evaluateAttempt({
