@@ -1,0 +1,15 @@
+[
+  {
+    "testId": "pyq-2025-gs-2",
+    "title": "PYQ 2: 2025 GS Paper I",
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionCount": 96,
+    "durationSeconds": 7200,
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "sourceUrl": "https://www.upsc.gov.in/examinations/previous-question-papers",
+    "isOfficialAnswerKey": false,
+    "assetPath": "assets/data/pyq/2025_gs_paper2.json"
+  }
+]

@@ -33,3 +33,4 @@ flutter:
   assets:
     - assets/branding/
     - assets/data/
+    - assets/data/pyq/

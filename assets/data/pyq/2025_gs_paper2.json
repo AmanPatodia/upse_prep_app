@@ -1,0 +1,1730 @@
+[
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 1,
+    "subject": "Science and Tech",
+    "chapter": "Technology",
+    "question": "Consider the following types of vehicles: I. Full battery electric vehicles II. Hydrogen fuel cell vehicles III. Fuel cell-electric hybrid vehicles. How many of the above are considered as alternative powertrain vehicles?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 2,
+    "subject": "Science and Tech",
+    "chapter": "Defence Tech",
+    "question": "With reference to Unmanned Aerial Vehicles (UAVs), consider the statements: I. All types can do vertical landing. II. All types can do automated hovering. III. All types can use battery only as source of power. How many statements are correct?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 3,
+    "subject": "Science and Tech",
+    "chapter": "Battery Materials",
+    "question": "In the context of electric vehicle batteries, consider: I. Cobalt II. Graphite III. Lithium IV. Nickel. How many of the above usually make up battery cathodes?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 4,
+    "subject": "Environment",
+    "chapter": "Pollution",
+    "question": "Consider the following: I. Cigarette butts II. Eyeglass lenses III. Car tyres. How many of them contain plastic?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 5,
+    "subject": "Science and Tech",
+    "chapter": "Industrial Chemistry",
+    "question": "Consider substances: I. Ethanol II. Nitroglycerine III. Urea. Coal gasification technology can be used in production of how many of them?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 6,
+    "subject": "Science and Tech",
+    "chapter": "Defence",
+    "question": "What is the common characteristic of CL-20, HMX and LLM-105?",
+    "options": [
+      "Alternatives to HFC refrigerants",
+      "Explosives in military weapons",
+      "High-energy fuels for cruise missiles",
+      "Fuels for rocket propulsion"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 7,
+    "subject": "Science and Tech",
+    "chapter": "AI and Quantum",
+    "question": "Consider statements: I. Majorana I chip is expected to enable quantum computing. II. It has been introduced by AWS. III. Deep learning is a subset of machine learning. Which are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 8,
+    "subject": "Science and Tech",
+    "chapter": "Biotech",
+    "question": "With reference to monoclonal antibodies, consider statements I. They are man-made proteins. II. They bind specific antigens and stimulate immunological function. III. They are used for viral infections like Nipah. Which are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 9,
+    "subject": "Science and Tech",
+    "chapter": "Biology",
+    "question": "Consider statements: I. No virus can survive in ocean waters. II. No virus can infect bacteria. III. No virus can change cellular transcriptional activity in host cells. How many are correct?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 10,
+    "subject": "Environment",
+    "chapter": "Pollution Control",
+    "question": "Activated carbon is good for pollutant removal. Statement II: It has large surface area and adsorbs heavy metals. Statement III: It can be synthesized from carbon-rich wastes. Which option is correct?",
+    "options": [
+      "Both II and III are correct and both explain I",
+      "Both correct but only one explains I",
+      "Only one is correct and explains I",
+      "Neither is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 11,
+    "subject": "Environment",
+    "chapter": "Climate",
+    "question": "Cement emissions and production process statements I-III; choose the correct option.",
+    "options": [
+      "Both II and III are correct and both explain I",
+      "Both correct but only one explains I",
+      "Only one is correct and explains I",
+      "Neither is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 12,
+    "subject": "Environment",
+    "chapter": "COP28",
+    "question": "Statements regarding COP28 Declaration on Climate and Health and India\u2019s stance; choose correct option.",
+    "options": [
+      "Both II and III are correct and both explain I",
+      "Both correct but only one explains I",
+      "Only one is correct and explains I",
+      "Neither is correct"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial)."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 13,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Scientific studies suggest that a shift is taking place in the Earth's rotation and axis. Statement II: Solar flares and associated coronal mass ejections bombarded the Earth's outermost atmosphere with tremendous amount of energy. Statement III: As the Earth's polar ice melts, the water tends to move towards the equator. Which one of the following is correct in respect of the above statements?",
+    "options": [
+      "Both Statements II and III are correct and both of them explain Statement I",
+      "Both Statement II and Statement III are correct but only one of them explains Statement I",
+      "Only one of the Statement II and III is correct and that explains Statement I",
+      "Neither Statement II nor Statement III is correct"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 14,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Article 6 of the Paris Agreement on climate change is frequently discussed in global discussions on sustainable development and climate change. Statement II: Article 6 of the Paris Agreement on climate change sets out the principles of carbon markets. Statement III: Article 6 of the Paris Agreement on climate change intends to promote inter-country non-market strategies to reach their climate targets. Which one of the following is correct in respect of the above statements?",
+    "options": [
+      "Both Statement II and Statement III are correct and both of them explain Statement I",
+      "Both Statement II and Statement III are correct but only one of them explains Statement I",
+      "Only one of the Statements II and III is correct and that explains Statement I",
+      "Neither Statement II nor Statement III is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 15,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Which one of the following launched the 'Nature Solutions Finance Hub for Asia and the Pacific'?",
+    "options": [
+      "The Asian Development Bank (ADB)",
+      "The Asian Infrastructure Investment Bank (AIIB)",
+      "The New Development Bank (NDB)",
+      "The International Bank for Reconstruction and Development (IBRD)"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 16,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to 'Direct Air Capture', an emerging technology, which of the following statements is/are correct? I. It can be used as a way of carbon sequestration. II. It can be a valuable approach for plastic production and in food processing. III. In aviation, it can be a source of carbon for combining with hydrogen to create synthetic low-carbon fuel.",
+    "options": [
+      "I and II only",
+      "III only",
+      "I, II and III",
+      "None of the above"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 17,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Regarding Peacock tarantula (Gooty tarantula), consider the following statements: I. It is an omnivorous crustacean. II. Its natural habitat in India is only limited to some forest areas. III. In its natural habitat, it is an arboreal species. Which of the statements given above is/are correct?",
+    "options": [
+      "I only",
+      "I and III",
+      "II only",
+      "II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 18,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Carbon dioxide (CO2) emissions in India are less than 0.5 t CO2/capita. II. In terms of CO2 emissions from fuel combustion, India ranks second in Asia-Pacific region. III. Electricity and heat producers are the largest source of CO2 emissions in India. Which of the statements given above is/are correct?",
+    "options": [
+      "I and III only",
+      "II only",
+      "II and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 19,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs: I. Cassava: Woody shrub II. Ginger: Herb with pseudostem III. Malabar spinach: Herbaceous climber IV. Mint: Annual shrub V. Papaya: Woody shrub. How many of the above pairs are correctly matched?",
+    "options": [
+      "Only two",
+      "Only three",
+      "Only four",
+      "All the five"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 20,
+    "subject": "Science and Tech",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to the planet Earth, consider the following statements: I. Rain forests produce more oxygen than that produced by oceans. II. Marine phytoplankton and photosynthetic bacteria produce about 50% of world's oxygen. III. Well-oxygenated surface water contains several folds higher oxygen than that in atmospheric air. Which of the statements given above is/are correct?",
+    "options": [
+      "I and II",
+      "II only",
+      "I and III",
+      "None of the above"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 21,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements about Raja Ram Mohan Roy: I. He possessed great love and respect for the traditional philosophical systems of the East. II. He desired his countrymen to accept the rational and scientific approach and the principle of human dignity and social equality of all men and women. Which of the statements given above is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 22,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following subjects with regard to Non-Cooperation Programme: I. Boycott of law-courts and foreign cloth II. Observance of strict non-violence III. Retention of titles and honours without using them in public IV. Establishment of Panchayats for settling disputes. How many of the above were parts of Non-Cooperation Programme?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 23,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "The irrigation device called 'Araghatta' was:",
+    "options": [
+      "a water bag made of leather pulled over a pulley",
+      "a large wheel with earthen pots tied to the outer ends of its spokes",
+      "a larger earthen pot driven by bullocks",
+      "a large water bucket pulled up by rope directly by hand"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 24,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Who among the following rulers in ancient India had assumed the titles 'Mattavilasa', 'Vichitrachitta' and 'Gunabhara'?",
+    "options": [
+      "Mahendravarman I",
+      "Simhavishnu",
+      "Narasimhavarman I",
+      "Simhavarman"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 25,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Fa-hien (Faxian), the Chinese pilgrim, travelled to India during the reign of:",
+    "options": [
+      "Samudragupta",
+      "Chandragupta II",
+      "Kumaragupta I",
+      "Skandagupta"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 26,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Who among the following led a successful military campaign against the kingdom of Srivijaya, the powerful maritime State, which ruled the Malay Peninsula, Sumatra, Java and the neighbouring islands?",
+    "options": [
+      "Amoghavarsha (Rashtrakuta)",
+      "Prataparudra (Kakatiya)",
+      "Rajendra I (Chola)",
+      "Vishnuvardhana (Hoysala)"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 27,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to ancient India (600-322 BC), consider the following pairs: I. Asmaka: Godavari II. Kamboja: Vipas III. Avanti: Mahanadi IV. Kosala: Sarayu. How many of the pairs given above are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 28,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "The first Gandharva Mahavidyalaya, a music training school, was set up in 1901 by Vishnu Digambar Paluskar in:",
+    "options": [
+      "Delhi",
+      "Gwalior",
+      "Ujjain",
+      "Lahore"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 29,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Ashokan inscriptions suggest that the 'Pradeshika', 'Rajuka' and 'Yukta' were important officers at the:",
+    "options": [
+      "village-level administration",
+      "district-level administration",
+      "provincial administration",
+      "level of the central administration"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 30,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements in respect of the Non-Cooperation Movement: I. The Congress declared the attainment of 'Swaraj' by all legitimate and peaceful means to be its objective. II. It was to be implemented in stages with civil disobedience and non-payment of taxes for the next stage only if 'Swaraj' did not come within a year and the Government resorted to repression. Which of the statements given above is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 31,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to investments, consider the following: I. Bonds II. Hedge Funds III. Stocks IV. Venture Capital. How many of the above are treated as Alternative Investment Funds?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 32,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Which of the following are the sources of income for the Reserve Bank of India? I. Buying and selling Government bonds II. Buying and selling foreign currency III. Pension fund management IV. Lending to private companies V. Printing and distributing currency notes",
+    "options": [
+      "I and II only",
+      "II, III and IV",
+      "I, III, IV and V",
+      "I, II and V"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 33,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to the Government of India, consider the following information: I. Directorate of Enforcement: Enforcement of the Fugitive Economic Offenders Act, 2018 | Internal Security Division, Ministry of Home Affairs II. Directorate of Revenue Intelligence: Enforces the provisions of the Customs Act, 1962 | Department of Revenue, Ministry of Finance III. Directorate General of Systems and Data Management: Carrying out big data analytics to assist tax officers for better policy and nabbing tax evaders | Department of Revenue, Ministry of Finance. In how many rows is the information correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 34,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. The Reserve Bank of India mandates all the listed companies in India to submit a Business Responsibility and Sustainability Report (BRSR). II. In India, a company submitting a BRSR makes disclosures in the report that are largely non-financial in nature. Which of the statements given above is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 35,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: In India, income from allied agricultural activities like poultry farming and wool rearing in rural areas is exempted from any tax. Statement II: In India, rural agricultural land is not considered a capital asset under the provisions of the Income-tax Act, 1961. Which one of the following is correct in respect of the above statements?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 36,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. India has joined the Minerals Security Partnership as a member. II. India is a resource-rich country in all the 30 critical minerals that it has identified. III. The Parliament in 2023 amended the Mines and Minerals (Development and Regulation) Act, 1957 empowering the Central Government to exclusively auction mining lease and composite license for certain critical minerals. Which statements are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 37,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: As regards returns from an investment in a company, generally, bondholders are considered to be relatively at lower risk than stockholders. Statement II: Bondholders are lenders to a company whereas stockholders are its owners. Statement III: For repayment purpose, bondholders are prioritized over stockholders by a company. Which one is correct?",
+    "options": [
+      "Both Statement II and Statement III are correct and both of them explain Statement I",
+      "Both Statement I and Statement II are correct and Statement I explains Statement II",
+      "Only one of the Statements II and III is correct and that explains Statement I",
+      "Neither Statement II nor Statement III is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 38,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. India accounts for a very large portion of all equity option contracts traded globally thus exhibiting a great boom. II. India's stock market has grown rapidly in the recent past even overtaking Hong Kong's at some point of time. III. There is no regulatory body either to warn small investors about risks of options trading or to act on unregistered financial advisors. Which of the statements given above are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 39,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Circular economy reduces the emissions of greenhouse gases. Statement II: Circular economy reduces the use of raw materials as inputs. Statement III: Circular economy reduces wastage in the production process. Which one is correct?",
+    "options": [
+      "Both Statement II and Statement III are correct and both of them explain Statement I",
+      "Both Statement II and Statement III are correct but only one of them explains Statement I",
+      "Only one of the Statements II and III is correct and that explains Statement I",
+      "Neither Statement II nor Statement III is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 40,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Capital receipts create a liability or cause a reduction in the assets of the Government. II. Borrowings and disinvestment are capital receipts. III. Interest received on loans creates a liability of the Government. Which of the statements given above are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 41,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following countries: I. Austria II. Bulgaria III. Croatia IV. Serbia V. Sweden VI. North Macedonia. How many of the above are members of NATO?",
+    "options": [
+      "Only three",
+      "Only four",
+      "Only five",
+      "All the six"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 42,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following countries: I. Bolivia II. Brazil III. Colombia IV. Ecuador V. Paraguay VI. Venezuela. Andes mountains pass through how many of the above countries?",
+    "options": [
+      "Only two",
+      "Only three",
+      "Only four",
+      "Only five"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 43,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following water bodies: I. Lake Tanganyika II. Lake Tonle Sap III. Patos Lagoon. Through how many of them does the equator pass?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 44,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements about turmeric: I. India is the largest producer and exporter of turmeric in the world. II. More than 30 varieties of turmeric are grown in India. III. Maharashtra, Telangana, Karnataka and Tamil Nadu are major turmeric producing States in India. Which of the statements given above are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 45,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Which of the following are the evidences of continental drift? I. Belt of ancient rocks from Brazil coast matches with those from Western Africa. II. Gold deposits of Ghana are derived from Brazil plateau when the two continents lay side by side. III. Gondwana sediments from India have counterparts in southern landmasses.",
+    "options": [
+      "I and III only",
+      "I and II only",
+      "I, II and III",
+      "II and III only"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 46,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: The amount of dust particles in the atmosphere is more in subtropical and temperate areas than in equatorial and polar regions. Statement II: Subtropical and temperate areas have less dry winds. Which one is correct?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 47,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: In January, in the Northern Hemisphere, isotherms bend equatorward while crossing landmasses and poleward while crossing oceans. Statement II: In January, air over the oceans is warmer than that over the landmasses in the Northern Hemisphere. Which one is correct?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 48,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Chalk is very permeable whereas clay is quite impermeable. Statement II: Chalk is porous and hence can absorb water. Statement III: Clay is not at all porous. Which one is correct?",
+    "options": [
+      "Both Statement II and Statement III are correct and both of them explain Statement I",
+      "Both Statement II and Statement III are correct but only one of them explains Statement I",
+      "Only one of the Statements II and III is correct and that explains Statement I",
+      "Neither Statement II nor Statement III is correct"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 49,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Without the atmosphere, temperature would be well below freezing point everywhere on Earth. II. Heat absorbed and trapped by the atmosphere maintains our planet's average temperature. III. Atmospheric gases like carbon dioxide are good at absorbing and trapping radiation. Which are correct?",
+    "options": [
+      "I and III only",
+      "I and II only",
+      "I, II and III",
+      "II and III only"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 50,
+    "subject": "Geography",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements about the Rashtriya Gokul Mission: I. It is important for upliftment of rural poor as majority of low producing indigenous animals are with small and marginal farmers and landless labourers. II. It was initiated to promote indigenous cattle and buffalo rearing and conservation scientifically and holistically. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 51,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Panchayats at the intermediate level exist in all States. II. To be eligible to be a Member of a Panchayat at the intermediate level, a person should attain the age of thirty years. III. The Chief Minister constitutes a commission to review financial position of Panchayats at the intermediate levels. Which of the statements are not correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 52,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements in respect of BIMSTEC: I. It is a regional organization of seven member States till January 2025. II. It came into existence with signing of the Dhaka Declaration, 1999. III. Bangladesh, India, Sri Lanka, Thailand and Nepal are founding members. IV. In BIMSTEC, the subsector of tourism is led by India. Which is/are correct?",
+    "options": [
+      "I and II",
+      "II and III",
+      "I and IV",
+      "I only"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 53,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Who amongst the following are members of the Jury to select the recipient of Gandhi Peace Prize? I. President of India II. Prime Minister of India III. Chief Justice of India IV. Leader of Opposition in Lok Sabha",
+    "options": [
+      "II and IV only",
+      "I, II and III",
+      "II, III and IV",
+      "I and III only"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 54,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "GPS-Aided Geo Augmented Navigation (GAGAN) uses ground stations to provide augmentation. Which statements are correct? I. It is designed to provide additional accuracy and integrity. II. It will allow more uniform and high quality air traffic management. III. It will provide benefits only in aviation but not in other modes of transportation.",
+    "options": [
+      "I, II and III",
+      "II and III only",
+      "I only",
+      "I and II only"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 55,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements regarding AI Action Summit held in Grand Palais, Paris in February 2025: I. Co-chaired with India, it builds on Bletchley Park Summit 2023 and Seoul Summit 2024. II. US and UK also signed the declaration on inclusive and sustainable AI. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 56,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs: I. International Year of the Woman Farmer: 2026 II. International Year of Sustainable and Resilient Tourism: 2027 III. International Year of Peace and Trust: 2025 IV. International Year of Asteroid Awareness and Planetary Defence: 2029. How many pairs are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 57,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements with regard to BRICS: I. 16th BRICS Summit was held under the Chairship of Russia in Kazan. II. Indonesia has become a full member of BRICS. III. Theme of the 16th BRICS Summit was Strengthening Multiculturalism for Just Global Development and Security. Which is/are correct?",
+    "options": [
+      "I and II",
+      "II and III",
+      "I and III",
+      "I only"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 58,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements about Lokpal: I. Lokpal power applies to public servants of India, but not to Indian public servants posted outside India. II. Only the Chief Justice of India, whether incumbent or retired, has to be its Chairperson. III. Chairperson or Member shall not be a person less than forty-five years of age on date of assuming office. IV. Lokpal cannot inquire allegations against a sitting Prime Minister. Which is/are correct?",
+    "options": [
+      "III only",
+      "II and III",
+      "I and IV",
+      "None of the above statements is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 59,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements in respect of the first Kho Kho World Cup: I. The event was held in Delhi, India. II. Indian men beat Nepal 78-40 in final. III. Indian women beat Nepal 54-36 in final. Which is/are correct?",
+    "options": [
+      "I only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 60,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. In the finals of the 45th Chess Olympiad held in 2024, Gukesh Dommaraju became the world's youngest winner after defeating Jan Nepomniachtchi. II. Abhimanyu Mishra holds the record of becoming world's youngest ever Grandmaster. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 61,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Some rare earth elements are used in manufacture of flat television screens and computer monitors. Statement II: Some rare earth elements have phosphorescent properties. Which one is correct?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 62,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Indian Railways prepared a National Rail Plan to create a future-ready railway system by 2028. II. Kavach is an Automatic Train Protection system developed in collaboration with Germany. III. Kavach system consists of RFID tags fitted on track in station section. Which statements are not correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 63,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following space missions: I. Axiom-4 II. SpaDeX III. Gaganyaan. How many of the above encourage and support micro-gravity research?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 64,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to India's defence, consider the following pairs (Aircraft type: Description): I. Dornier-228: Maritime patrol aircraft II. IL-76: Supersonic combat aircraft III. C-17 Globemaster III: Military transport aircraft. How many pairs are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 65,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Artificial way of causing rainfall to reduce air pollution makes use of:",
+    "options": [
+      "silver iodide and potassium iodide",
+      "silver nitrate and potassium iodide",
+      "silver iodide and potassium nitrate",
+      "silver nitrate and potassium chloride"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 66,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements with regard to pardoning power of the President of India: I. The exercise of this power can be subjected to limited judicial review. II. The President can exercise this power without the advice of the Central Government. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 67,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. On dissolution of the House of the People, the Speaker shall not vacate office until immediately before first meeting of the next House. II. A Member elected as Speaker shall resign from political party immediately. III. Speaker may be removed by resolution passed by majority of all then members provided at least fourteen days' notice. Which are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 68,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. If question arises on disqualification under 10th Schedule, President's decision in accordance with opinion of Council of Union Ministers shall be final. II. There is no mention of the word political party in Constitution of India. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 69,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: In India, State Governments have no power for making rules for grant of concessions in extraction of minor minerals even though such minerals are located in their territories. Statement II: Central Government has power to notify minor minerals under relevant law. Which one is correct?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 70,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Which organization has enacted the Nature Restoration Law (NRL) to tackle climate change and biodiversity loss?",
+    "options": [
+      "The European Union",
+      "The World Bank",
+      "The Organization for Economic Cooperation and Development",
+      "The Food and Agriculture Organization"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 71,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Suppose revenue expenditure is Rs. 80,000 crores and revenue receipts are Rs. 60,000 crores. Budget also shows borrowings of Rs. 10,000 crores and interest payments of Rs. 6,000 crores. Which statements are correct? I. Revenue deficit is Rs. 20,000 crores. II. Fiscal deficit is Rs. 10,000 crores. III. Primary deficit is Rs. 4,000 crores.",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 72,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "India is one of the founding members of the International North-South Transport Corridor (INSTC), a multimodal transportation corridor, which will connect:",
+    "options": [
+      "India to Central Asia to Europe via Iran",
+      "India to Central Asia via China",
+      "India to South-East Asia through Bangladesh and Myanmar",
+      "India to Europe through Azerbaijan"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 73,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: Statement I: Of the two major ethanol producers, Brazil and USA, the former produces more ethanol than the latter. Statement II: Unlike in USA where corn is principal feedstock, sugarcane is principal feedstock in Brazil. Which one is correct?",
+    "options": [
+      "Both Statement I and Statement II are correct and Statement II explains Statement I",
+      "Both Statement I and Statement II are correct but Statement II does not explain Statement I",
+      "Statement I is correct but Statement II is not correct",
+      "Statement I is not correct but Statement II is correct"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 74,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "World Bank warned that India could become one of the first places where wet-bulb temperatures routinely exceed 35 C. Which statements best reflect implications? I. Peninsular India will most likely suffer from flooding, tropical cyclones and droughts. II. Survival of animals including humans will be affected as shedding body heat through perspiration becomes difficult.",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 75,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "A country's fiscal deficit stands at Rs. 50,000 crores. It is receiving Rs. 10,000 crores through non-debt creating capital receipts. Interest payments stand at Rs. 1,500 crores. What is its gross primary deficit?",
+    "options": [
+      "Rs. 48,500 crores",
+      "Rs. 40,000 crores",
+      "Rs. 38,500 crores",
+      "Rs. 11,500 crores"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 76,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Which statements with regard to recommendations of the 15th Finance Commission are correct? I. Grants of 4,800 crores from 2022-23 to 2025-26 for educational outcomes. II. 45% of net proceeds of Union taxes are to be shared with States. III. 45,000 crores as performance-based incentive for agricultural reforms. IV. It reintroduced tax effort criteria to reward fiscal performance.",
+    "options": [
+      "I, II and III",
+      "I, II and IV",
+      "I, III and IV",
+      "II, III and IV"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 77,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements in respect of the International Bank for Reconstruction and Development (IBRD): I. It provides loans and guarantees to middle income countries. II. It works single-handedly to help developing countries reduce poverty. III. It was established to help Europe rebuild after World War II. Which statements are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 79,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following countries: I. United Arab Emirates II. France III. Germany IV. Singapore V. Bangladesh. How many countries other than India accept international merchant payments under UPI?",
+    "options": [
+      "Only two",
+      "Only three",
+      "Only four",
+      "All the five"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 80,
+    "subject": "Economy",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements about PM Surya Ghar Muft Bijli Yojana: I. It targets installation of one crore solar rooftop panels in the residential sector. II. MNRE aims to impart training on installation, operation, maintenance and repairs at grassroots levels. III. It aims to create more than three lakhs skilled manpower through fresh skilling and up-skilling. Which are correct?",
+    "options": [
+      "I and II only",
+      "I and III only",
+      "II and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 81,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to the Indian polity, consider the following statements: I. An Ordinance can amend any Central Act. II. An Ordinance can abridge a Fundamental Right. III. An Ordinance can come into effect from a back date. Which are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 82,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs (State: Description): I. Arunachal Pradesh: Capital is named after a fort, and state has two National Parks II. Nagaland: State came into existence on basis of a Constitutional Amendment Act III. Tripura: Initially a Part C State, then centrally administered territory in 1956 and later full-fledged state. How many pairs are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 83,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to India, consider the following: I. Inter-State Council II. National Security Council III. Zonal Councils. How many of the above are established as per provisions of the Constitution of India?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 84,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following statements: I. Constitution explicitly mentions that in certain spheres Governor acts in his/her own discretion. II. President can, of his/her own, reserve a bill passed by State Legislature for consideration without it being forwarded by Governor. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 85,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs (Provision: Stated under): I. Separation of Judiciary from Executive in public services of the State: Directive Principles of State Policy II. Valuing and preserving rich heritage of composite culture: Fundamental Duties III. Prohibition of employment of children below age 14 years in factories: Fundamental Rights. How many pairs are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 86,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to Constitution of India, if an area in a State is declared as Scheduled Area under Fifth Schedule: I. State Government loses its executive power in such areas and a local body assumes total administration. II. Union Government can take over total administration under certain circumstances on recommendations of Governor. Which is/are correct?",
+    "options": [
+      "I only",
+      "II only",
+      "Both I and II",
+      "Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 87,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to India, consider the following pairs (Organization: Union Ministry): I. National Automotive Board: Ministry of Commerce and Industry II. Coir Board: Ministry of Heavy Industries and Public Enterprises III. Tea Board: Ministry of Commerce and Industry. How many pairs are correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 88,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following subjects under Constitution of India: I. List I (Union List) in Seventh Schedule II. Extent of executive power of a State III. Conditions of Governor's office. For amendment with respect to which, ratification by not less than one-half of States is required before presenting bill to President?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 89,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "With reference to Indian polity, consider the following statements: I. Governor is not answerable to any court for exercise and performance of powers and duties. II. No criminal proceedings shall be instituted or continued against Governor during term of office. III. Members of a State Legislature are not liable to proceedings in any court for anything said within House. Which are correct?",
+    "options": [
+      "I and II only",
+      "II and III only",
+      "I and III only",
+      "I, II and III"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 90,
+    "subject": "Polity and Governance",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following activities: I. Production of crude oil II. Refining, storage and distribution of petroleum III. Marketing and sale of petroleum products IV. Production of natural gas. How many of the above are regulated by the Petroleum and Natural Gas Regulatory Board in India?",
+    "options": [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All the four"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 91,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "'Sedition has become my religion' was the famous statement given by Gandhiji at the time of:",
+    "options": [
+      "the Champaran Satyagraha",
+      "publicly violating Salt Law at Dandi",
+      "attending the Second Round Table Conference in London",
+      "the launch of the Quit India Movement"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 92,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "The famous female figurine known as 'Dancing Girl', found at Mohenjo-daro, is made of:",
+    "options": [
+      "carnelian",
+      "clay",
+      "bronze",
+      "gold"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 93,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Who provided legal defence to people arrested in the aftermath of Chauri Chaura incident?",
+    "options": [
+      "C. R. Das",
+      "Madan Mohan Malaviya and Krishna Kant",
+      "Dr. Saifuddin Kitchlew and Khwaja Hasan Nizami",
+      "M. A. Jinnah"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 94,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Subsequent to which one of the following events did Gandhiji decide to include upliftment of Harijans in his political and social programme?",
+    "options": [
+      "The Poona Pact",
+      "The Gandhi-Irwin Agreement (Delhi Pact)",
+      "Arrest of Congress leadership at launch of Civil Disobedience Movement",
+      "Promulgation of the Government of India Act, 1935"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 95,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following fruits: I. Papaya II. Pineapple III. Guava. How many of the above were introduced in India by the Portuguese in the sixteenth and seventeenth centuries?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 99,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs (Country: Resource-rich in): I. Botswana: Diamond II. Chile: Lithium III. Indonesia: Nickel. In how many rows is the information correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  },
+  {
+    "year": 2025,
+    "paperType": "gs",
+    "paperNumber": 2,
+    "questionNumber": 100,
+    "subject": "History",
+    "chapter": "GS Paper I 2025",
+    "question": "Consider the following pairs (Region: Country): I. Mallorca: Italy II. Normandy: Spain III. Sardinia: France. In how many rows is the given information correctly matched?",
+    "options": [
+      "Only one",
+      "Only two",
+      "All the three",
+      "None"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 GS-I",
+    "explanation": "Expert key (Unofficial). Full question text can be updated in asset later."
+  }
+]
