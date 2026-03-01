@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../../shared/widgets/common_widgets.dart';
+import '../../settings/presentation/bloc/app_preferences_cubit.dart';
 import '../domain/current_affairs_models.dart';
 import 'bloc/current_affairs_cubit.dart';
 
@@ -277,6 +278,13 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
   }
 
   Widget _buildItemCard(BuildContext context, CurrentAffairItem effective) {
+    final prefs = context.watch<AppPreferencesCubit>().state;
+    final body = Theme.of(context).textTheme.bodyMedium;
+    final scaledBody = body?.copyWith(
+      fontSize: (body.fontSize ?? 14) * prefs.fontScale,
+      height: prefs.lineHeight,
+    );
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -300,7 +308,7 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
               style: Theme.of(context).textTheme.bodySmall,
             ),
             const SizedBox(height: 8),
-            Text(effective.summary),
+            Text(effective.summary, style: scaledBody),
             const SizedBox(height: 8),
             Wrap(
               spacing: 8,
@@ -309,7 +317,7 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
                   .toList(growable: false),
             ),
             const SizedBox(height: 8),
-            ...effective.facts.map((fact) => Text('• $fact')),
+            ...effective.facts.map((fact) => Text('• $fact', style: scaledBody)),
             Row(
               children: [
                 TextButton.icon(

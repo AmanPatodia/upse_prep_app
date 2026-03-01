@@ -100,7 +100,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                       ).colorScheme.primaryContainer,
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                child: const Icon(Icons.shield_outlined),
+                                child: Icon(
+                                  Icons.shield_outlined,
+                                  color:
+                                      Theme.of(
+                                        context,
+                                      ).colorScheme.onPrimaryContainer,
+                                ),
                               ),
                               Text(
                                 'Welcome Back',

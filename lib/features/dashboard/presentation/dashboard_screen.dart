@@ -47,6 +47,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   icon: const Icon(Icons.newspaper_outlined),
                   label: const Text('Current Affairs'),
                 ),
+                FilledButton.icon(
+                  onPressed: () => context.push('/settings'),
+                  icon: const Icon(Icons.settings_outlined),
+                  label: const Text('Settings'),
+                ),
               ],
             ),
           ),

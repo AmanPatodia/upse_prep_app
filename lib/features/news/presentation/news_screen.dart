@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 
 import '../../../shared/widgets/common_widgets.dart';
+import '../../settings/presentation/bloc/app_preferences_cubit.dart';
 import '../domain/news_models.dart';
 import 'bloc/news_cubit.dart';
 
@@ -79,6 +80,12 @@ class _NewsScreenState extends State<NewsScreen> {
         }
 
         final dateFiltered = _applyDateFilter(state.items);
+        final prefs = context.watch<AppPreferencesCubit>().state;
+        final body = Theme.of(context).textTheme.bodyMedium;
+        final scaledBody = body?.copyWith(
+          fontSize: (body.fontSize ?? 14) * prefs.fontScale,
+          height: prefs.lineHeight,
+        );
         final sourceOptions = <String>{
           'All',
           ...dateFiltered.map((e) => e.sourceName),
@@ -188,7 +195,7 @@ class _NewsScreenState extends State<NewsScreen> {
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                         const SizedBox(height: 8),
-                        Text(item.summary),
+                        Text(item.summary, style: scaledBody),
                         Row(
                           children: [
                             TextButton.icon(

@@ -69,6 +69,7 @@ class _McqPracticeScreenState extends State<McqPracticeScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: DropdownButtonFormField<String?>(
+                  isExpanded: true,
                   value: state.selectedSubject,
                   decoration: const InputDecoration(
                     labelText: 'Select Subject',
@@ -77,13 +78,38 @@ class _McqPracticeScreenState extends State<McqPracticeScreen> {
                   items: [
                     const DropdownMenuItem<String?>(
                       value: null,
-                      child: Text('All Subjects'),
+                      child: Text(
+                        'All Subjects',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                     ...state.subjects.map(
-                      (s) =>
-                          DropdownMenuItem<String?>(value: s, child: Text(s)),
+                      (s) => DropdownMenuItem<String?>(
+                        value: s,
+                        child: Text(
+                          s,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
                     ),
                   ],
+                  selectedItemBuilder:
+                      (context) => [
+                        const Text(
+                          'All Subjects',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                        ...state.subjects.map(
+                          (s) => Text(
+                            s,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                        ),
+                      ],
                   onChanged:
                       (value) => context.read<McqCubit>().selectSubject(value),
                 ),
@@ -92,6 +118,7 @@ class _McqPracticeScreenState extends State<McqPracticeScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: DropdownButtonFormField<String?>(
+                  isExpanded: true,
                   value: state.selectedChapter,
                   decoration: const InputDecoration(
                     labelText: 'Select Chapter',
@@ -100,13 +127,38 @@ class _McqPracticeScreenState extends State<McqPracticeScreen> {
                   items: [
                     const DropdownMenuItem<String?>(
                       value: null,
-                      child: Text('All Chapters'),
+                      child: Text(
+                        'All Chapters',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
                     ...state.chapters.map(
-                      (c) =>
-                          DropdownMenuItem<String?>(value: c, child: Text(c)),
+                      (c) => DropdownMenuItem<String?>(
+                        value: c,
+                        child: Text(
+                          c,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
                     ),
                   ],
+                  selectedItemBuilder:
+                      (context) => [
+                        const Text(
+                          'All Chapters',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                        ...state.chapters.map(
+                          (c) => Text(
+                            c,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                        ),
+                      ],
                   onChanged:
                       state.selectedSubject == null
                           ? null

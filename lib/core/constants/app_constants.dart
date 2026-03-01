@@ -1,5 +1,5 @@
 class AppConstants {
-  static const appName = 'UPSC Prep Pro';
+  static const appName = 'AMS IAS';
 
   static const subjectsBox = 'subjects_box';
   static const mcqAttemptsBox = 'mcq_attempts_box';

@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'app/app.dart';
 import 'core/logging/app_logger.dart';
+import 'core/constants/app_constants.dart';
 import 'core/network/logged_dio_factory.dart';
 import 'core/storage/hive_boxes.dart';
 import 'features/ai/data/ai_engine.dart';
@@ -20,6 +21,7 @@ import 'features/news/presentation/bloc/news_cubit.dart';
 import 'features/pyq/data/pyq_repository.dart';
 import 'features/pyq/presentation/bloc/pyq_home_cubit.dart';
 import 'features/pyq/presentation/bloc/pyq_test_cubit.dart';
+import 'features/settings/presentation/bloc/app_preferences_cubit.dart';
 import 'features/subjects/data/subjects_repository.dart';
 import 'features/subjects/presentation/bloc/subjects_cubit.dart';
 
@@ -89,6 +91,12 @@ Future<void> main() async {
           ),
           BlocProvider<McqCubit>(
             create: (context) => McqCubit(context.read<McqRepository>()),
+          ),
+          BlocProvider<AppPreferencesCubit>(
+            create:
+                (_) => AppPreferencesCubit(
+                  Hive.box(AppConstants.settingsBox),
+                ),
           ),
           BlocProvider<NewsCubit>(
             create: (context) => NewsCubit(context.read<NewsRepository>()),

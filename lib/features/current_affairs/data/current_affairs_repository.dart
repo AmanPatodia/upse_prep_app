@@ -131,8 +131,16 @@ class OpenRssCurrentAffairsRepository implements CurrentAffairsRepository {
           options: Options(
             sendTimeout: const Duration(seconds: 8),
             receiveTimeout: const Duration(seconds: 8),
+            validateStatus: (status) => status != null && status < 500,
           ),
         );
+        if ((response.statusCode ?? 500) >= 400) {
+          AppLogger.warn(
+            'CurrentAffairsRepo',
+            'rss2json returned ${response.statusCode} for $feedUrl',
+          );
+          continue;
+        }
         final data = _asJsonMap(response.data);
         if (data is! Map<String, dynamic>) {
           AppLogger.warn(
@@ -353,8 +361,12 @@ class OpenRssCurrentAffairsRepository implements CurrentAffairsRepository {
         receiveTimeout: const Duration(seconds: 12),
         responseType: ResponseType.plain,
         headers: const {'User-Agent': 'Mozilla/5.0 UPSCPrepApp/1.0'},
+        validateStatus: (status) => status != null && status < 500,
       ),
     );
+    if ((response.statusCode ?? 500) >= 400) {
+      throw StateError('Feed HTTP ${response.statusCode}');
+    }
     final xml = response.data?.toString() ?? '';
     if (xml.isEmpty) return const <CurrentAffairItem>[];
 
@@ -505,8 +517,16 @@ class OpenRssCurrentAffairsRepository implements CurrentAffairsRepository {
           receiveTimeout: const Duration(seconds: 12),
           responseType: ResponseType.plain,
           headers: const {'User-Agent': 'Mozilla/5.0 UPSCPrepApp/1.0'},
+          validateStatus: (status) => status != null && status < 500,
         ),
       );
+      if ((response.statusCode ?? 500) >= 400) {
+        AppLogger.warn(
+          'CurrentAffairsRepo',
+          'Listing fetch failed with ${response.statusCode}: $listingUrl',
+        );
+        return const <CurrentAffairItem>[];
+      }
       final html = response.data?.toString() ?? '';
       if (html.isEmpty) return const <CurrentAffairItem>[];
 
@@ -538,8 +558,16 @@ class OpenRssCurrentAffairsRepository implements CurrentAffairsRepository {
               receiveTimeout: const Duration(seconds: 12),
               responseType: ResponseType.plain,
               headers: const {'User-Agent': 'Mozilla/5.0 UPSCPrepApp/1.0'},
+              validateStatus: (status) => status != null && status < 500,
             ),
           );
+          if ((detail.statusCode ?? 500) >= 400) {
+            AppLogger.warn(
+              'CurrentAffairsRepo',
+              'Detail fetch failed with ${detail.statusCode}: $link',
+            );
+            continue;
+          }
           final detailHtml = detail.data?.toString() ?? '';
           if (detailHtml.isEmpty) continue;
 
