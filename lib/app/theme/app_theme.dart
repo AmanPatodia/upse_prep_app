@@ -32,7 +32,7 @@ class AppTheme {
 
     final baseText = Typography.blackCupertino;
     final headingStyle = baseText.titleLarge?.copyWith(
-      fontFamily: 'Lora',
+      fontFamily: 'Inter',
       color: _oxfordBlue,
       fontWeight: FontWeight.w700,
       letterSpacing: 0.2,
@@ -53,21 +53,21 @@ class AppTheme {
         titleMedium: headingStyle?.copyWith(fontSize: 18),
         titleSmall: headingStyle?.copyWith(fontSize: 16),
         bodyLarge: baseText.bodyLarge?.copyWith(
-          fontFamily: 'Public Sans',
+          fontFamily: 'Inter',
           color: _textOnLight,
           height: 1.35,
         ),
         bodyMedium: baseText.bodyMedium?.copyWith(
-          fontFamily: 'Public Sans',
+          fontFamily: 'Inter',
           color: _textOnLight,
           height: 1.35,
         ),
         bodySmall: baseText.bodySmall?.copyWith(
-          fontFamily: 'Public Sans',
+          fontFamily: 'Inter',
           color: _textOnLight.withValues(alpha: 0.8),
         ),
         labelLarge: baseText.labelLarge?.copyWith(
-          fontFamily: 'Public Sans',
+          fontFamily: 'Inter',
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -125,7 +125,7 @@ class AppTheme {
       chipTheme: ChipThemeData(
         backgroundColor: _offWhite,
         selectedColor: _antiqueGold.withValues(alpha: 0.2),
-        labelStyle: const TextStyle(color: _textOnLight, fontFamily: 'Public Sans'),
+        labelStyle: const TextStyle(color: _textOnLight, fontFamily: 'Inter'),
       ),
       navigationBarTheme: const NavigationBarThemeData(
         backgroundColor: _surfaceLight,
@@ -157,7 +157,7 @@ class AppTheme {
 
     final baseText = Typography.whiteCupertino;
     final headingStyle = baseText.titleLarge?.copyWith(
-      fontFamily: 'Montserrat',
+      fontFamily: 'Inter',
       color: Colors.white,
       fontWeight: FontWeight.w700,
     );
@@ -176,10 +176,10 @@ class AppTheme {
         titleLarge: headingStyle,
         titleMedium: headingStyle?.copyWith(fontSize: 18),
         titleSmall: headingStyle?.copyWith(fontSize: 16),
-        bodyLarge: baseText.bodyLarge?.copyWith(fontFamily: 'Roboto', height: 1.35),
-        bodyMedium: baseText.bodyMedium?.copyWith(fontFamily: 'Roboto', height: 1.35),
+        bodyLarge: baseText.bodyLarge?.copyWith(fontFamily: 'Inter', height: 1.35),
+        bodyMedium: baseText.bodyMedium?.copyWith(fontFamily: 'Inter', height: 1.35),
         bodySmall: baseText.bodySmall?.copyWith(
-          fontFamily: 'Roboto',
+          fontFamily: 'Inter',
           color: Colors.white70,
         ),
       ),
@@ -221,7 +221,7 @@ class AppTheme {
       chipTheme: const ChipThemeData(
         backgroundColor: _slateBlue,
         selectedColor: Color(0x66FFC107),
-        labelStyle: TextStyle(color: Colors.white, fontFamily: 'Roboto'),
+        labelStyle: TextStyle(color: Colors.white, fontFamily: 'Inter'),
       ),
       navigationBarTheme: const NavigationBarThemeData(
         backgroundColor: _charcoal,
