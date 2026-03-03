@@ -4,28 +4,21 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  // Theme 1: Collector's Office (default light)
-  static const Color _oxfordBlue = Color(0xFF002147);
-  static const Color _antiqueGold = Color(0xFFD4AF37);
-  static const Color _offWhite = Color(0xFFF8F9FA);
-  static const Color _surfaceLight = Color(0xFFFFFFFF);
-  static const Color _textOnLight = Color(0xFF111827);
-
-  // Theme 3: Midnight Aspirant (dark)
-  static const Color _charcoal = Color(0xFF121212);
-  static const Color _slateBlue = Color(0xFF37474F);
-  static const Color _amber = Color(0xFFFFC107);
-  static const Color _surfaceDark = Color(0xFF1A1A1A);
+  static const Color _primary = Color(0xFF1A227F);
+  static const Color _lightBg = Color(0xFFF6F6F8);
+  static const Color _darkBg = Color(0xFF121320);
+  static const Color _surfaceLight = Colors.white;
+  static const Color _surfaceDark = Color(0xFF1A1D2E);
+  static const Color _textOnLight = Color(0xFF0F172A);
+  static const Color _textOnDark = Color(0xFFF1F5F9);
 
   static ThemeData get light {
-    const scheme = ColorScheme(
+    final scheme = ColorScheme.fromSeed(
+      seedColor: _primary,
       brightness: Brightness.light,
-      primary: _oxfordBlue,
+    ).copyWith(
+      primary: _primary,
       onPrimary: Colors.white,
-      secondary: _antiqueGold,
-      onSecondary: Colors.black,
-      error: Color(0xFFB3261E),
-      onError: Colors.white,
       surface: _surfaceLight,
       onSurface: _textOnLight,
     );
@@ -33,15 +26,15 @@ class AppTheme {
     final baseText = Typography.blackCupertino;
     final headingStyle = baseText.titleLarge?.copyWith(
       fontFamily: 'Inter',
-      color: _oxfordBlue,
+      color: _textOnLight,
       fontWeight: FontWeight.w700,
-      letterSpacing: 0.2,
+      letterSpacing: -0.2,
     );
 
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: _offWhite,
+      scaffoldBackgroundColor: _lightBg,
       textTheme: baseText.copyWith(
         displayLarge: headingStyle,
         displayMedium: headingStyle,
@@ -71,101 +64,112 @@ class AppTheme {
           fontWeight: FontWeight.w600,
         ),
       ),
+      fontFamily: 'Inter',
       cupertinoOverrideTheme: const CupertinoThemeData(
         brightness: Brightness.light,
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       appBarTheme: const AppBarTheme(
-        backgroundColor: _offWhite,
-        foregroundColor: _oxfordBlue,
-        centerTitle: false,
+        backgroundColor: _lightBg,
+        foregroundColor: _textOnLight,
+        centerTitle: true,
         elevation: 0,
       ),
       cardTheme: CardThemeData(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         color: _surfaceLight,
-        elevation: 3,
-        shadowColor: Colors.black.withValues(alpha: 0.12),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        elevation: 2,
+        shadowColor: Colors.black.withValues(alpha: 0.08),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          backgroundColor: _antiqueGold,
-          foregroundColor: Colors.black,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          backgroundColor: _primary,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: _primary,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: _oxfordBlue,
-          side: const BorderSide(color: _oxfordBlue, width: 1.2),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          foregroundColor: _textOnLight,
+          side: BorderSide(color: _primary.withValues(alpha: 0.2), width: 1),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: _oxfordBlue,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+          foregroundColor: _primary,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: _surfaceLight,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: 14,
+        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(color: _oxfordBlue.withValues(alpha: 0.2)),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: _primary.withValues(alpha: 0.2)),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: _oxfordBlue, width: 1.4),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: _primary, width: 1.2),
         ),
       ),
       chipTheme: ChipThemeData(
-        backgroundColor: _offWhite,
-        selectedColor: _antiqueGold.withValues(alpha: 0.2),
+        backgroundColor: const Color(0xFFEFF1F5),
+        selectedColor: _primary.withValues(alpha: 0.15),
         labelStyle: const TextStyle(color: _textOnLight, fontFamily: 'Inter'),
       ),
-      navigationBarTheme: const NavigationBarThemeData(
+      navigationBarTheme: NavigationBarThemeData(
         backgroundColor: _surfaceLight,
-        indicatorColor: Color(0x26D4AF37),
+        indicatorColor: _primary.withValues(alpha: 0.15),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: _antiqueGold,
-        foregroundColor: Colors.black,
+        backgroundColor: _primary,
+        foregroundColor: Colors.white,
       ),
-      progressIndicatorTheme: const ProgressIndicatorThemeData(
-        color: _antiqueGold,
-        circularTrackColor: Color(0x22002147),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: _primary,
+        circularTrackColor: _primary.withValues(alpha: 0.2),
       ),
     );
   }
 
   static ThemeData get dark {
-    const scheme = ColorScheme(
+    final scheme = ColorScheme.fromSeed(
+      seedColor: _primary,
       brightness: Brightness.dark,
-      primary: _amber,
-      onPrimary: Colors.black,
-      secondary: _slateBlue,
-      onSecondary: Colors.white,
-      error: Color(0xFFF2B8B5),
-      onError: Colors.black,
+    ).copyWith(
+      primary: _primary,
+      onPrimary: Colors.white,
       surface: _surfaceDark,
-      onSurface: Colors.white,
+      onSurface: _textOnDark,
     );
 
     final baseText = Typography.whiteCupertino;
     final headingStyle = baseText.titleLarge?.copyWith(
       fontFamily: 'Inter',
-      color: Colors.white,
+      color: _textOnDark,
       fontWeight: FontWeight.w700,
     );
 
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: _charcoal,
+      scaffoldBackgroundColor: _darkBg,
       textTheme: baseText.copyWith(
         displayLarge: headingStyle,
         displayMedium: headingStyle,
@@ -180,60 +184,88 @@ class AppTheme {
         bodyMedium: baseText.bodyMedium?.copyWith(fontFamily: 'Inter', height: 1.35),
         bodySmall: baseText.bodySmall?.copyWith(
           fontFamily: 'Inter',
-          color: Colors.white70,
+          color: const Color(0xFF94A3B8),
         ),
       ),
+      fontFamily: 'Inter',
       cupertinoOverrideTheme: const CupertinoThemeData(
         brightness: Brightness.dark,
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       appBarTheme: const AppBarTheme(
-        backgroundColor: _charcoal,
-        foregroundColor: Colors.white,
+        backgroundColor: _darkBg,
+        foregroundColor: _textOnDark,
         elevation: 0,
+        centerTitle: true,
       ),
       cardTheme: CardThemeData(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         color: _surfaceDark,
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          backgroundColor: _amber,
-          foregroundColor: Colors.black,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+          backgroundColor: _primary,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: _primary,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: Colors.white,
-          side: const BorderSide(color: _slateBlue),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+          foregroundColor: _textOnDark,
+          side: BorderSide(color: _primary.withValues(alpha: 0.3)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: _amber,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+          foregroundColor: const Color(0xFF93A4FF),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
-      chipTheme: const ChipThemeData(
-        backgroundColor: _slateBlue,
-        selectedColor: Color(0x66FFC107),
-        labelStyle: TextStyle(color: Colors.white, fontFamily: 'Inter'),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: const Color(0x33121320),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: 14,
+        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: _primary.withValues(alpha: 0.3)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: _primary, width: 1.2),
+        ),
       ),
-      navigationBarTheme: const NavigationBarThemeData(
-        backgroundColor: _charcoal,
-        indicatorColor: Color(0x33FFC107),
+      chipTheme: ChipThemeData(
+        backgroundColor: const Color(0xFF23283D),
+        selectedColor: _primary.withValues(alpha: 0.35),
+        labelStyle: const TextStyle(color: _textOnDark, fontFamily: 'Inter'),
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        backgroundColor: _darkBg,
+        indicatorColor: _primary.withValues(alpha: 0.3),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: _amber,
-        foregroundColor: Colors.black,
+        backgroundColor: _primary,
+        foregroundColor: Colors.white,
       ),
-      progressIndicatorTheme: const ProgressIndicatorThemeData(
-        color: _amber,
-        circularTrackColor: Color(0x4437474F),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: _primary,
+        circularTrackColor: _primary.withValues(alpha: 0.25),
       ),
     );
   }
