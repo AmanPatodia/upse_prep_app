@@ -9,17 +9,129 @@ import '../domain/auth_models.dart';
 abstract class AuthRepository {
   Future<String?> signup({
     required String name,
-    required String email,
+    required String identifier,
     required String password,
   });
-  Future<AppUser?> login({required String email, required String password});
-  Future<bool> userExists(String email);
+  Future<AppUser?> login({
+    required String identifier,
+    required String password,
+  });
+  Future<bool> userExists(String identifier);
 }
 
 class HiveAuthRepository implements AuthRepository {
   static const _passwordSalt = 'upsc_prep_private_salt_v1';
 
+  final _emailRegex = RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$');
+
+  bool _isEmail(String input) => _emailRegex.hasMatch(input.trim());
+
+  bool _isPhone(String input) {
+    final raw = input.trim();
+    if (raw.isEmpty) return false;
+    if (!RegExp(r'^[0-9+\-\s()]+$').hasMatch(raw)) return false;
+
+    var digits = raw.replaceAll(RegExp(r'\D'), '');
+    if (digits.startsWith('00')) {
+      digits = digits.substring(2);
+    }
+
+    if (digits.length == 10) return true;
+    if (digits.length == 11 && digits.startsWith('0')) return true;
+    if (digits.length == 12 && digits.startsWith('91')) return true;
+    return false;
+  }
+
   String _normalizeEmail(String email) => email.trim().toLowerCase();
+
+  String _normalizePhone(String phone) {
+    var digits = phone.replaceAll(RegExp(r'\D'), '');
+    if (digits.startsWith('00')) {
+      digits = digits.substring(2);
+    }
+
+    String? local10;
+    if (digits.length == 10) {
+      local10 = digits;
+    } else if (digits.length == 11 && digits.startsWith('0')) {
+      local10 = digits.substring(1);
+    } else if (digits.length == 12 && digits.startsWith('91')) {
+      local10 = digits.substring(2);
+    }
+
+    if (local10 != null) {
+      return '+91$local10';
+    }
+    return phone.trim();
+  }
+
+  Set<String> _phoneKeys(String input) {
+    final keys = <String>{};
+    final raw = input.trim();
+    if (raw.isEmpty) return keys;
+
+    final digits = raw.replaceAll(RegExp(r'\D'), '');
+    if (digits.isEmpty) return keys;
+
+    keys.add(raw);
+    keys.add(digits);
+    keys.add(raw.toLowerCase());
+
+    if (digits.length == 10) {
+      keys.add('+91$digits');
+      keys.add('0$digits');
+      keys.add('91$digits');
+    } else if (digits.length == 11 && digits.startsWith('0')) {
+      final local10 = digits.substring(1);
+      keys.add(local10);
+      keys.add('+91$local10');
+      keys.add('91$local10');
+    } else if (digits.length == 12 && digits.startsWith('91')) {
+      final local10 = digits.substring(2);
+      keys.add(local10);
+      keys.add('+91$digits');
+      keys.add('0$local10');
+      keys.add('91$local10');
+    }
+
+    return keys;
+  }
+
+  Set<String> _candidateKeys(String identifier) {
+    final keys = <String>{identifier.trim(), identifier.trim().toLowerCase()};
+    final parsed = _normalizeIdentifier(identifier);
+    if (parsed.error != null) return keys;
+
+    keys.add(parsed.normalized);
+    if (parsed.type == 'phone') {
+      keys.addAll(_phoneKeys(identifier));
+      keys.addAll(_phoneKeys(parsed.normalized));
+    }
+    return keys;
+  }
+
+  ({String normalized, String type, String? error}) _normalizeIdentifier(
+    String input,
+  ) {
+    final raw = input.trim();
+    if (raw.isEmpty) {
+      return (normalized: '', type: '', error: 'Email or phone is required.');
+    }
+
+    if (_isEmail(raw)) {
+      return (normalized: _normalizeEmail(raw), type: 'email', error: null);
+    }
+
+    if (_isPhone(raw)) {
+      return (normalized: _normalizePhone(raw), type: 'phone', error: null);
+    }
+
+    return (
+      normalized: '',
+      type: '',
+      error: 'Enter a valid email or a valid 10-digit phone number.'
+    );
+  }
 
   String _hashPassword(String input) {
     final bytes = utf8.encode('$_passwordSalt:$input');
@@ -31,37 +143,54 @@ class HiveAuthRepository implements AuthRepository {
   @override
   Future<String?> signup({
     required String name,
-    required String email,
+    required String identifier,
     required String password,
   }) async {
-    final normalizedEmail = _normalizeEmail(email);
-    if (await userExists(normalizedEmail)) {
-      return 'An account with this email already exists.';
+    final normalized = _normalizeIdentifier(identifier);
+    if (normalized.error != null) {
+      return normalized.error;
+    }
+
+    if (await userExists(identifier)) {
+      return 'An account with this email or phone already exists.';
     }
 
     final user = AppUser(
       name: name.trim(),
-      email: normalizedEmail,
+      identifier: normalized.normalized,
+      identifierType: normalized.type,
       passwordHash: _hashPassword(password),
       createdAt: DateTime.now(),
     );
 
-    await _box.put(normalizedEmail, user.toMap());
+    await _box.put(normalized.normalized, user.toMap());
     return null;
   }
 
   @override
   Future<AppUser?> login({
-    required String email,
+    required String identifier,
     required String password,
   }) async {
-    final normalizedEmail = _normalizeEmail(email);
-    final raw = _box.get(normalizedEmail);
-    if (raw is! Map) {
+    final normalized = _normalizeIdentifier(identifier);
+    if (normalized.error != null) {
       return null;
     }
 
-    final map = raw.cast<String, dynamic>();
+    Map<dynamic, dynamic>? rawMap;
+    for (final key in _candidateKeys(identifier)) {
+      final raw = _box.get(key);
+      if (raw is Map) {
+        rawMap = raw;
+        break;
+      }
+    }
+
+    if (rawMap == null) {
+      return null;
+    }
+
+    final map = rawMap.cast<String, dynamic>();
     final user = AppUser.fromMap(map);
     final hashed = _hashPassword(password);
     if (user.passwordHash != hashed) {
@@ -72,7 +201,10 @@ class HiveAuthRepository implements AuthRepository {
   }
 
   @override
-  Future<bool> userExists(String email) async {
-    return _box.containsKey(_normalizeEmail(email));
+  Future<bool> userExists(String identifier) async {
+    for (final key in _candidateKeys(identifier)) {
+      if (_box.containsKey(key)) return true;
+    }
+    return false;
   }
 }

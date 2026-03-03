@@ -30,14 +30,21 @@ class AuthCubit extends Cubit<AuthState> {
 
   final AuthRepository _authRepository;
 
-  Future<bool> login({required String email, required String password}) async {
+  Future<bool> login({
+    required String identifier,
+    required String password,
+  }) async {
     emit(state.copyWith(isBusy: true, errorMessage: null));
-    final user = await _authRepository.login(email: email, password: password);
+    final user = await _authRepository.login(
+      identifier: identifier,
+      password: password,
+    );
     if (user == null) {
       emit(
         state.copyWith(
           isBusy: false,
-          errorMessage: 'Invalid credentials. Please sign up first or retry.',
+          errorMessage:
+              'Invalid email/phone or password. Please sign up first or retry.',
         ),
       );
       return false;
@@ -49,13 +56,13 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<String?> signup({
     required String name,
-    required String email,
+    required String identifier,
     required String password,
   }) async {
     emit(state.copyWith(isBusy: true, errorMessage: null));
     final error = await _authRepository.signup(
       name: name,
-      email: email,
+      identifier: identifier,
       password: password,
     );
     if (error != null) {
