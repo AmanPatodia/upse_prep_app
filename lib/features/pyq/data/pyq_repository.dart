@@ -1,6 +1,10 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
 import '../../../core/constants/app_constants.dart';
+import '../../../core/logging/app_logger.dart';
 import '../../mcq/domain/mcq_models.dart';
 import '../domain/pyq_models.dart';
 
@@ -22,91 +26,161 @@ abstract class PyqRepository {
 }
 
 class DemoPyqRepository implements PyqRepository {
-  static const _bankKey = 'pyq_bank_v2';
+  static const _logTag = 'PyqRepo';
+  static const _indexAssetPath = 'assets/data/pyq/index.json';
+  static const _defaultSourceUrl =
+      'https://www.upsc.gov.in/examinations/previous-question-papers';
 
-  static const _subjects = {
-    'History': ['Modern India', 'Art and Culture'],
-    'Geography': ['Physical Geography', 'Indian Geography'],
-    'Polity': ['Constitution', 'Parliament'],
-    'Economy': ['National Income', 'Budget'],
-    'Environment': ['Climate', 'Biodiversity'],
-    'Science and Tech': ['Space', 'Biotechnology'],
-    'CSAT Aptitude': ['Comprehension', 'Reasoning and Numeracy'],
-  };
-
-  static const _sourceUrl = 'https://vajiramandravi.com/upsc-previous-papers/';
+  final Map<String, List<PyqQuestion>> _paperCache = {};
+  List<_PyqPaperManifest>? _manifestCache;
 
   Box get _attemptBox => Hive.box(AppConstants.pyqAttemptsBox);
-  Box get _bankBox => Hive.box(AppConstants.pyqBankBox);
 
-  Future<List<PyqQuestion>> _getBank() async {
-    final cached = _bankBox.get(_bankKey);
-    if (cached is List) {
-      return cached
+  Future<List<_PyqPaperManifest>> _getManifest() async {
+    if (_manifestCache != null) return _manifestCache!;
+
+    try {
+      AppLogger.debug(_logTag, 'Loading manifest: $_indexAssetPath');
+      final raw = await rootBundle.loadString(_indexAssetPath);
+      final decoded = jsonDecode(raw);
+      if (decoded is! List) {
+        AppLogger.warn(_logTag, 'Manifest is not a list. Returning empty.');
+        _manifestCache = const <_PyqPaperManifest>[];
+        return _manifestCache!;
+      }
+
+      final manifests = decoded
           .whereType<Map>()
-          .map((e) => PyqQuestion.fromMap(e.cast<String, dynamic>()))
-          .toList(growable: false);
-    }
+          .map((e) => _PyqPaperManifest.fromMap(e.cast<String, dynamic>()))
+          .where((e) => e.assetPath.trim().isNotEmpty)
+          .toList(growable: false)
+        ..sort((a, b) {
+          if (a.year != b.year) return b.year.compareTo(a.year);
+          if (a.paperType != b.paperType) {
+            return a.paperType == PyqPaperType.gs ? -1 : 1;
+          }
+          return a.paperNumber.compareTo(b.paperNumber);
+        });
 
-    final seeded = _seedQuestions();
-    await _bankBox.put(
-      _bankKey,
-      seeded.map((e) => e.toMap()).toList(growable: false),
-    );
-    return seeded;
+      _manifestCache = manifests;
+      AppLogger.info(_logTag, 'Manifest loaded. papers=${manifests.length}');
+      return manifests;
+    } catch (error, stackTrace) {
+      AppLogger.error(
+        _logTag,
+        'Failed to load manifest: $_indexAssetPath',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      _manifestCache = const <_PyqPaperManifest>[];
+      return _manifestCache!;
+    }
   }
 
-  List<PyqQuestion> _seedQuestions() {
-    final questions = <PyqQuestion>[];
+  Future<List<PyqQuestion>> _loadPaperQuestions(_PyqPaperManifest manifest) async {
+    final cached = _paperCache[manifest.testId];
+    if (cached != null) return cached;
 
-    for (final year in List<int>.generate(12, (i) => 2025 - i)) {
-      for (final paperType in [PyqPaperType.gs, PyqPaperType.csat]) {
-        for (var i = 0; i < 100; i++) {
-          final subjectPool =
-              paperType == PyqPaperType.gs
-                  ? _subjects.keys.where((s) => s != 'CSAT Aptitude').toList()
-                  : ['CSAT Aptitude'];
-
-          final subject = subjectPool[i % subjectPool.length];
-          final chapter = _subjects[subject]![i % _subjects[subject]!.length];
-
-          questions.add(
-            PyqQuestion(
-              id: 'pyq-$year-${paperType.name}-${i + 1}',
-              year: year,
-              paperType: paperType,
-              subject: subject,
-              chapter: chapter,
-              question:
-                  'Consider the following statements regarding $chapter:\n'
-                  '1. Statement A connected to UPSC prelims framework.\n'
-                  '2. Statement B connected to UPSC prelims framework.\n'
-                  'Which of the statements given above is/are correct?',
-              options: const [
-                '1 only',
-                '2 only',
-                'Both 1 and 2',
-                'Neither 1 nor 2',
-              ],
-              correctIndex: i % 4,
-              explanation:
-                  'Reference style: UPSC PYQ pattern practice. This is indexed for $year ${paperType.name.toUpperCase()} paper under $chapter.',
-              topicTag:
-                  paperType == PyqPaperType.gs
-                      ? 'Static Core'
-                      : 'Aptitude Core',
-              difficulty: Difficulty.values[i % Difficulty.values.length],
-              isCurrentAffairsLinked:
-                  paperType == PyqPaperType.gs && i % 5 == 0,
-              sourceName: 'Vajiram & Ravi',
-              sourceUrl: _sourceUrl,
-            ),
-          );
-        }
+    try {
+      AppLogger.debug(
+        _logTag,
+        'Loading paper file: ${manifest.assetPath} (testId=${manifest.testId})',
+      );
+      final raw = await rootBundle.loadString(manifest.assetPath);
+      final decoded = jsonDecode(raw);
+      if (decoded is! List) {
+        AppLogger.warn(
+          _logTag,
+          'Paper file is not a list: ${manifest.assetPath}',
+        );
+        _paperCache[manifest.testId] = const <PyqQuestion>[];
+        return _paperCache[manifest.testId]!;
       }
-    }
 
-    return questions;
+      final items = <PyqQuestion>[];
+      for (final row in decoded.whereType<Map>()) {
+        final map = row.cast<String, dynamic>();
+        final year = (map['year'] as num?)?.toInt() ?? manifest.year;
+        final paperTypeRaw = (map['paperType']?.toString() ?? manifest.paperType.name)
+            .trim()
+            .toLowerCase();
+        final paperType =
+            paperTypeRaw == 'csat' ? PyqPaperType.csat : PyqPaperType.gs;
+        final paperNumber =
+            (map['paperNumber'] as num?)?.toInt() ?? manifest.paperNumber;
+        final qNo = (map['questionNumber'] as num?)?.toInt() ?? (items.length + 1);
+
+        final question = (map['question']?.toString() ?? '').trim();
+        final options = (map['options'] as List<dynamic>? ?? [])
+            .map((e) => e.toString().trim())
+            .where((e) => e.isNotEmpty)
+            .toList(growable: false);
+        if (question.isEmpty || options.length < 2) continue;
+
+        final answerIndex = _parseAnswerToIndex(map['answer']);
+        final explanation = (map['explanation']?.toString() ?? '').trim();
+
+        items.add(
+          PyqQuestion(
+            id: 'pyq-$year-${paperType.name}-$paperNumber-q$qNo',
+            year: year,
+            paperType: paperType,
+            subject: (map['subject']?.toString() ?? 'General Studies').trim(),
+            chapter: (map['chapter']?.toString() ?? manifest.title).trim(),
+            question: question,
+            options: options,
+            correctIndex:
+                answerIndex >= 0 && answerIndex < options.length ? answerIndex : 0,
+            explanation: explanation.isEmpty
+                ? 'Answer key: Expert (Unofficial)'
+                : explanation,
+            topicTag: (map['topicTag']?.toString() ?? 'PYQ').trim(),
+            difficulty: Difficulty.values.firstWhere(
+              (d) => d.name == (map['difficulty']?.toString() ?? 'medium'),
+              orElse: () => Difficulty.medium,
+            ),
+            isCurrentAffairsLinked: map['isCurrentAffairsLinked'] as bool? ?? false,
+            sourceName: map['sourceName']?.toString() ?? manifest.sourceName,
+            sourceUrl: map['sourceUrl']?.toString() ?? manifest.sourceUrl,
+          ),
+        );
+      }
+
+      items.sort((a, b) => _extractQuestionNumber(a.id).compareTo(_extractQuestionNumber(b.id)));
+      _paperCache[manifest.testId] = items;
+      AppLogger.info(
+        _logTag,
+        'Paper loaded: ${manifest.testId} questions=${items.length}',
+      );
+      return items;
+    } catch (error, stackTrace) {
+      AppLogger.error(
+        _logTag,
+        'Failed to load paper file: ${manifest.assetPath}',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      _paperCache[manifest.testId] = const <PyqQuestion>[];
+      return _paperCache[manifest.testId]!;
+    }
+  }
+
+  int _extractQuestionNumber(String id) {
+    final match = RegExp(r'-q(\d+)$').firstMatch(id);
+    return int.tryParse(match?.group(1) ?? '') ?? 0;
+  }
+
+  int _parseAnswerToIndex(Object? answer) {
+    if (answer is int) return answer;
+    final raw = (answer?.toString() ?? '').trim().toUpperCase();
+    if (raw.isEmpty) return 0;
+    final cleaned = raw.replaceAll(RegExp(r'[^A-E0-9-]'), '');
+    if (cleaned.isEmpty) return 0;
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+    if (letters.contains(cleaned)) return letters.indexOf(cleaned);
+    final asNum = int.tryParse(cleaned);
+    if (asNum == null) return 0;
+    return asNum > 0 ? asNum - 1 : asNum;
   }
 
   @override
@@ -115,8 +189,14 @@ class DemoPyqRepository implements PyqRepository {
     String? subject,
     String? chapter,
   }) async {
-    final items = await _getBank();
-    return items
+    final manifests = await _getManifest();
+    final all = <PyqQuestion>[];
+
+    for (final manifest in manifests) {
+      all.addAll(await _loadPaperQuestions(manifest));
+    }
+
+    return all
         .where((q) {
           final yearPass = year == null || q.year == year;
           final subjectPass = subject == null || q.subject == subject;
@@ -128,78 +208,43 @@ class DemoPyqRepository implements PyqRepository {
 
   @override
   Future<List<PyqTestCatalogItem>> getAvailableTests() async {
-    final items = await _getBank();
-    final grouped = <String, List<PyqQuestion>>{};
-
-    for (final q in items) {
-      final key = '${q.year}-${q.paperType.name}';
-      grouped.putIfAbsent(key, () => []).add(q);
-    }
-
-    final sortedKeys = grouped.keys.toList(growable: false)..sort((a, b) {
-      final ay = int.parse(a.split('-').first);
-      final by = int.parse(b.split('-').first);
-      if (ay != by) return by.compareTo(ay);
-      return a.compareTo(b);
-    });
-
-    return sortedKeys
-        .asMap()
-        .entries
-        .map((entry) {
-          final idx = entry.key + 1;
-          final key = entry.value;
-          final parts = key.split('-');
-          final year = int.parse(parts[0]);
-          final paperType =
-              parts[1] == 'gs' ? PyqPaperType.gs : PyqPaperType.csat;
-          final questions = grouped[key]!;
-          final label =
-              paperType == PyqPaperType.gs ? 'GS Paper I' : 'CSAT Paper II';
-          return PyqTestCatalogItem(
-            testId: 'pyq-$year-${paperType.name}',
-            title: 'PYQ $idx: $year $label',
-            year: year,
-            paperType: paperType,
-            questionCount: questions.length,
-            durationSeconds: 120 * 60,
-            sourceName: 'Vajiram & Ravi',
-            sourceUrl: _sourceUrl,
-          );
-        })
+    final manifests = await _getManifest();
+    AppLogger.info(_logTag, 'Building test catalog from manifests=${manifests.length}');
+    return manifests
+        .map(
+          (m) => PyqTestCatalogItem(
+            testId: m.testId,
+            title: m.title,
+            year: m.year,
+            paperType: m.paperType,
+            questionCount: m.questionCount,
+            durationSeconds: m.durationSeconds,
+            sourceName: m.sourceName,
+            sourceUrl: m.sourceUrl,
+            isOfficialAnswerKey: m.isOfficialAnswerKey,
+          ),
+        )
         .toList(growable: false);
   }
 
   @override
   Future<PyqTestPaper> getTestById(String testId) async {
-    final match = RegExp(r'pyq-(\d{4})-(gs|csat)').firstMatch(testId);
-    if (match == null) {
+    final manifests = await _getManifest();
+    final manifest = manifests.where((m) => m.testId == testId).firstOrNull;
+    if (manifest == null) {
       throw Exception('Invalid test id: $testId');
     }
 
-    final year = int.parse(match.group(1)!);
-    final paperType =
-        match.group(2) == 'gs' ? PyqPaperType.gs : PyqPaperType.csat;
-
-    final all = await _getBank();
-    final selected = all
-        .where((q) => q.year == year && q.paperType == paperType)
-        .take(100)
-        .toList(growable: false);
-
-    if (selected.isEmpty) {
-      throw Exception(
-        'No PYQ data found for $year ${paperType.name.toUpperCase()}',
-      );
+    final questions = await _loadPaperQuestions(manifest);
+    if (questions.isEmpty) {
+      throw Exception('No PYQ data found for ${manifest.title}');
     }
 
-    final label = paperType == PyqPaperType.gs ? 'GS Paper I' : 'CSAT Paper II';
-
     return PyqTestPaper(
-      id: testId,
-      title: '$year $label',
-      durationSeconds: 120 * 60,
-      questions: selected,
+      id: manifest.testId,
+      title: manifest.title,
+      durationSeconds: manifest.durationSeconds,
+      questions: questions,
     );
   }
 
@@ -263,5 +308,55 @@ class DemoPyqRepository implements PyqRepository {
         .toList(growable: false)
       ..sort((a, b) => b.submittedAt.compareTo(a.submittedAt));
     return reports;
+  }
+}
+
+class _PyqPaperManifest {
+  const _PyqPaperManifest({
+    required this.testId,
+    required this.title,
+    required this.year,
+    required this.paperType,
+    required this.paperNumber,
+    required this.questionCount,
+    required this.durationSeconds,
+    required this.sourceName,
+    required this.sourceUrl,
+    required this.isOfficialAnswerKey,
+    required this.assetPath,
+  });
+
+  final String testId;
+  final String title;
+  final int year;
+  final PyqPaperType paperType;
+  final int paperNumber;
+  final int questionCount;
+  final int durationSeconds;
+  final String sourceName;
+  final String sourceUrl;
+  final bool isOfficialAnswerKey;
+  final String assetPath;
+
+  factory _PyqPaperManifest.fromMap(Map<String, dynamic> map) {
+    final year = (map['year'] as num?)?.toInt() ?? 0;
+    final paperTypeRaw = (map['paperType']?.toString() ?? 'gs').trim().toLowerCase();
+    final paperType = paperTypeRaw == 'csat' ? PyqPaperType.csat : PyqPaperType.gs;
+    final paperNumber = (map['paperNumber'] as num?)?.toInt() ?? 1;
+    final label = paperType == PyqPaperType.gs ? 'GS Paper I' : 'CSAT Paper II';
+
+    return _PyqPaperManifest(
+      testId: (map['testId']?.toString() ?? 'pyq-$year-${paperType.name}-$paperNumber').trim(),
+      title: (map['title']?.toString() ?? 'PYQ $paperNumber: $year $label').trim(),
+      year: year,
+      paperType: paperType,
+      paperNumber: paperNumber,
+      questionCount: (map['questionCount'] as num?)?.toInt() ?? 0,
+      durationSeconds: (map['durationSeconds'] as num?)?.toInt() ?? 120 * 60,
+      sourceName: (map['sourceName']?.toString() ?? 'UPSC Previous Papers').trim(),
+      sourceUrl: (map['sourceUrl']?.toString() ?? DemoPyqRepository._defaultSourceUrl).trim(),
+      isOfficialAnswerKey: map['isOfficialAnswerKey'] as bool? ?? false,
+      assetPath: (map['assetPath']?.toString() ?? '').trim(),
+    );
   }
 }

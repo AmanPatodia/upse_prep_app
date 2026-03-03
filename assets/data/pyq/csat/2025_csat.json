@@ -1,0 +1,1442 @@
+[
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 1,
+    "subject": "Reading Comprehension",
+    "chapter": "Higher Education",
+    "question": "Which one of the following statements best reflects the central idea conveyed by the passage (Passage-1)?",
+    "options": [
+      "(a) India does not have enough resources for promoting quality education in its universities.",
+      "(b) The institutions of higher learning in the country should not be under the control of the Government.",
+      "(c) Classroom approach to higher education should be done away with.",
+      "(d) Classroom needs to be reimagined and teaching to be re-invented."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage emphasizes that 'Teaching has to be re-invented' and learning should move toward 'critical and independent thinking' and 'learning through doing.'"
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 2,
+    "subject": "Reading Comprehension",
+    "chapter": "Higher Education",
+    "question": "With reference to the above passage, the following assumptions have been made: I. Higher education is a constantly evolving subject that needs to align towards new developments in all spheres of society. II. In our country, sufficient funds are not allocated for promoting higher education. Which of the above assumptions is/are valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Assumption I aligns with the need to meet 'new demands of society.' Assumption II is not mentioned as the passage focuses on methodology, not funding."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 3,
+    "subject": "Reading Comprehension",
+    "chapter": "Food & Population",
+    "question": "Which one of the following statements best reflects the crux of the passage (Passage-2)?",
+    "options": [
+      "(a) There is an urgent need for a public policy to promote the consumption of cereal-based foods in wealthier societies.",
+      "(b) Animal-based food is far less efficient than grain/plant-based food in terms of production and utilization.",
+      "(c) Plant-based protein should replace the animal-based protein in our daily diets.",
+      "(d) Inequality in food production and consumption is inevitable in any fast changing society."
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage highlights the low calorie recovery rate (16% for chickens, 5-7% for large animals) when grains are converted to animal products."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 4,
+    "subject": "Reading Comprehension",
+    "chapter": "Food & Population",
+    "question": "With reference to the above passage, the following assumptions have been made: I. The food manufacturing and processing industries in every country should align their objectives... II. Wealthier societies tend to incur great loss of calories of food materials due to indirect utilization of their agricultural produce. Which of the above assumptions is/are valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage explicitly states that as societies become wealthier, animal product consumption increases, leading to inefficient calorie recovery."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 5,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "What is the maximum value of n such that 7x343x385x1000x2401x77777 is divisible by 35^n?",
+    "options": [
+      "(a) 3",
+      "(b) 4",
+      "(c) 5",
+      "(d) 7"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "35^n = (7x5)^n. Prime factorization shows the expression contains 7^10 and 5^4. The lower power (5^4) determines n=4."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 6,
+    "subject": "Logical Reasoning",
+    "chapter": "Number Series",
+    "question": "What is X in the sequence: 24, X, 12, 18, 36, 90?",
+    "options": [
+      "(a) 18",
+      "(b) 12",
+      "(c) 9",
+      "(d) 6"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The pattern involves multiplying by increments of 0.5: 24x0.5=12, 12x1=12, 12x1.5=18, 18x2=36, 36x2.5=90."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 7,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Speed, Time and Distance",
+    "question": "P and Q walk along a circular track. They start at 5:00 a.m. from the same point in opposite directions. P walks at 5 rounds/hr and Q walks at 3 rounds/hr. How many times will they cross each other between 5:20 a.m. and 7:00 a.m.?",
+    "options": [
+      "(a) 12",
+      "(b) 13",
+      "(c) 14",
+      "(d) 15"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Relative speed = 8 rounds/hr. Total meetings in 2 hours = 16. Subtracting 2 meetings before 5:20 and the meeting exactly at 7:00 gives 13."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 8,
+    "subject": "Logical Reasoning",
+    "chapter": "Mathematical Operations",
+    "question": "If P=+, Q=-, R=x, S=÷, then insert proper notations in 60_15_3_20_4 = 20:",
+    "options": [
+      "(a) SPRQ",
+      "(b) QRPS",
+      "(c) QRSP",
+      "(d) SPQR"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "60-15x3+20÷4 = 60-45+5 = 20."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 9,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Relative Speed",
+    "question": "A tram overtakes 2 persons X and Y walking at 3km/hr and 4km/hr in 8 and 9 seconds. What is the length of the tram?",
+    "options": [
+      "(a) 15m",
+      "(b) 18m",
+      "(c) 20m",
+      "(d) 24m"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Relative speed calculations lead to a tram speed of 12km/hr and a length of 20 meters."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 10,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "If N^2 = 12345678987654321, how many digits does N have?",
+    "options": [
+      "(a) 8",
+      "(b) 9",
+      "(c) 10",
+      "(d) 11"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The square of a number with 'n' ones (111...) follows this peak pattern where the peak digit is 'n'. Peak is 9, so 9 digits."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 11,
+    "subject": "Reading Comprehension",
+    "chapter": "Agriculture",
+    "question": "Which one of the following statements best reflects the corollary to the above passage (Passage-1: Agriculture)?",
+    "options": [
+      "(a) The benefit of economic reforms percolates down more slowly to the agriculture sector...",
+      "(b) For India, the green revolution was not as useful as it was expected to be.",
+      "(c) India lagged behind other countries in adapting mechanized and modern farming.",
+      "(d) Rural-to-urban migration resulted in the stagnant agriculture sector."
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage contrasts stagnant agriculture with consistent non-agricultural growth, implying slower reform benefits for agriculture."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 12,
+    "subject": "Reading Comprehension",
+    "chapter": "Agriculture",
+    "question": "With reference to the passage, the following assumptions have been made: Divergence... could have been reduced by: I. adapting large-scale cultivation... II. providing free insurance... Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage discusses growth rates but does not offer these specific structural or economic solutions."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 13,
+    "subject": "Reading Comprehension",
+    "chapter": "Handloom Industry",
+    "question": "Which one of the following statements best reflects the most logical and rational message (Passage-2: Handlooms)?",
+    "options": [
+      "(a) We need to free the handloom industry from the limited narrative linked to preserving cultural heritage.",
+      "(b) Continued State support... ensures the preservation of... old traditions.",
+      "(c) Household units... should be modernized...",
+      "(d) Handloom products need to be converted to machine-made designer products..."
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage critiques the narrow 'linear' view of tradition that causes people to ignore the industry."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 14,
+    "subject": "Reading Comprehension",
+    "chapter": "Handloom Industry",
+    "question": "With reference to the above passage, assumptions made: I. No need for State involvement... II. Handloom products are no longer appealing... Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage critiques the narrative, not the necessity of state support or the products' intrinsic appeal."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 15,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "Consider first 100 natural numbers. How many are not divisible by any of 2, 3, 5, 7, and 9?",
+    "options": [
+      "(a) 20",
+      "(b) 21",
+      "(c) 22",
+      "(d) 23"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "This refers to the 25 prime numbers between 1-100. Subtracting 2, 3, 5, 7 and adding '1' gives 22."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 16,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Inequalities",
+    "question": "If 4<=x<=8 and 2<=y<=7, what is the ratio of max(x+y) to min(x-y)?",
+    "options": [
+      "(a) 6",
+      "(b) 15/2",
+      "(c) -15/2",
+      "(d) None of the above"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Max(x+y)=15, Min(x-y)=4-7=-3. Ratio = 15/-3 = -5."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 17,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "Let p and k be primes such that p^2+k is a prime < 30. Number of possible values of k?",
+    "options": [
+      "(a) 4",
+      "(b) 5",
+      "(c) 6",
+      "(d) 7"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Pairs (p,k) satisfying this: (2,3), (2,7), (2,13), (2,19), and (3,2). Total 5 values for k."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 18,
+    "subject": "Quantitative Aptitude",
+    "chapter": "LCM & HCF",
+    "question": "n sets of 3 positive integers with LCM=1001 and HCF=1. Value of n?",
+    "options": [
+      "(a) 6",
+      "(b) 7",
+      "(c) 8",
+      "(d) More than 8"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Prime factors of 1001 are 7, 11, 13. Multiple combinations exceed 8 sets."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 19,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Alphanumeric Puzzle",
+    "question": "PQR-PS=PPT. Q=3, T<6. Number of possible values of (R,S)?",
+    "options": [
+      "(a) 2",
+      "(b) 3",
+      "(c) 4",
+      "(d) More than 4"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Algebraic reduction and testing digit constraints (P=1) yields 3 pairs."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 20,
+    "subject": "Logical Reasoning",
+    "chapter": "Letter Series",
+    "question": "Complete the sequence: AB_CC_A_BCCC_BBC_C",
+    "options": [
+      "(a) B, C, B, C, A",
+      "(b) A, C, B, C, A",
+      "(c) B, C, B, A, C",
+      "(d) C, B, B, A, C"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Dividing into groups of 6 reveals the pattern ABBCCC."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 21,
+    "subject": "Reading Comprehension",
+    "chapter": "Climate Change",
+    "question": "Which statement best reflects the most logical, rational and pragmatic message (Passage-1: States & Emissions)?",
+    "options": [
+      "(a) Mitigation... essentially the responsibility of each State.",
+      "(b) India is too diverse to implement any effective strategy...",
+      "(c) It is basically the responsibility of the Union Government...",
+      "(d) India needs to formulate effective... strategies at the State/region level."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage argues for region-specific adaptation based on unique local challenges (coastal vs dry vs Himalayan)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 22,
+    "subject": "Reading Comprehension",
+    "chapter": "Climate Change",
+    "question": "Assumptions: I. Green energy production can be linked to... strategies. II. Effects... much more severe in coastal and mountainous regions. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage links wind power potential to sustainable goals. It mentions 'unique challenges' but does not declare them 'much more severe.'"
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 23,
+    "subject": "Reading Comprehension",
+    "chapter": "Social & Economic Policy",
+    "question": "Which one of the following statements best reflects the critical message (Passage-2: Insecurity)?",
+    "options": [
+      "(a) India's political executive should be aware...",
+      "(b) In India, poverty is the primary reason for social inequality...",
+      "(c) Poverty and social inequality are so intricately linked...",
+      "(d) Insecurity, more than poverty, is the main economic issue that Government policies must address."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage identifies insecurity as the most acutely felt economic problem, affecting those both below and over the poverty line."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 24,
+    "subject": "Reading Comprehension",
+    "chapter": "Social & Economic Policy",
+    "question": "Assumptions: I. People above the poverty line also prone to suffer from anxiety... II. Eradication of poverty can result in peace... Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage explicitly mentions insecurity for those 'just over the poverty line.' Peace/social equality outcomes are not discussed."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 25,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Cubes & Dice",
+    "question": "A solid cube painted yellow cut into 60 smaller equal pieces. I. Min cuts = 9. II. Unpainted pieces = 6. Which is correct?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "5x4x3 distribution: cuts = 4+3+2=9. Unpainted = (5-2)x(4-2)x(3-2) = 6."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 26,
+    "subject": "Logical Reasoning",
+    "chapter": "Puzzles",
+    "question": "If 7*24=25 and 12*16=20, what is 16*63?",
+    "options": [
+      "(a) 70",
+      "(b) 66",
+      "(c) 65",
+      "(d) 64"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Follows Pythagorean triples: sqrt(16^2+63^2) = 65."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 27,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Profit & Loss / Percentage",
+    "question": "Petrol price up 10% (was 90). Person travels 2200km at 16km/l. How many km to reduce to maintain expenditure?",
+    "options": [
+      "(a) 180 km",
+      "(b) 200 km",
+      "(c) 220 km",
+      "(d) 240 km"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Cost parity calculation (99d = 2200x90) results in 2000km, a 200km reduction."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 28,
+    "subject": "Quantitative Aptitude",
+    "chapter": "LCM & Remainder",
+    "question": "N divided by 3, 5, 6, 9 leaves remainders 1, 3, 4, 7. Smallest value of N?",
+    "options": [
+      "(a) 1068",
+      "(b) 1072",
+      "(c) 1078",
+      "(d) 1082"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Common difference (divisor-remainder) is 2. LCM(3,5,6,9)=90. 1080-2 = 1078."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 29,
+    "subject": "Logical Reasoning",
+    "chapter": "Inequalities",
+    "question": "I. B>C... B always > E. II. P>Q... S always < V. Which is correct?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Opposite signs in I make comparison impossible. S<=V in II, so 'always less' is incorrect."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 30,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "Unit digit in 1x3x5x7x9x...x999?",
+    "options": [
+      "(a) 1",
+      "(b) 3",
+      "(c) 5",
+      "(d) 9"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Multiplication of 5 with any odd number results in 5 as the unit digit."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 31,
+    "subject": "Reading Comprehension",
+    "chapter": "Environment & Livelihood",
+    "question": "Which statement best reflects the critical message (Passage-1: Ecosystems)?",
+    "options": [
+      "(a) Conservation... not an issue to be worried about...",
+      "(b) Commercial exploitation... goes against fundamental rights...",
+      "(c) Sustenance of livelihood and degradation... exacerbate one another...",
+      "(d) Commercial exploitation... should be completely stopped."
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage highlights the acute conflict in developing countries between livelihood, commerce, and conservation."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 32,
+    "subject": "Reading Comprehension",
+    "chapter": "Environment & Livelihood",
+    "question": "Assumptions: I. No country needs to depend on ecosystems... II. Resource-rich countries need to share... Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage states commercial exploitation *can* boost income (refutes I) and does not mention global sharing (refutes II)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 33,
+    "subject": "Reading Comprehension",
+    "chapter": "Green Energy",
+    "question": "Which one of the following statements best reflects the central idea (Passage-2: Renewable Energy)?",
+    "options": [
+      "(a) Economies of scale is essential...",
+      "(b) Modern technological progress is intensely linked...",
+      "(c) Countries with large economies are in a better position...",
+      "(d) Timing plays a crucial role in the case of green technology development."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage emphasizes 'moving early and gradually' vs a 'late, more chaotic transition.'"
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 34,
+    "subject": "Reading Comprehension",
+    "chapter": "Green Energy",
+    "question": "Assumptions: I. Path-dependent investments will benefit growth... II. If other technologies follow solar's pattern... Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Vision IAS notes A is clearly supported, while C is a possibility if extending solar logic to all tech."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 35,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "N=p+q+r where p,q,r are distinct factors of N. How many numbers below 50?",
+    "options": [
+      "(a) 6",
+      "(b) 7",
+      "(c) 8",
+      "(d) 9"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "This property holds for multiples of 6 (Perfect numbers or related): 6, 12, 18, 24, 30, 36, 42, 48."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 36,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "Primes p, q, r < 20 such that p-q=q-r. Distinct possible values for p+q+r?",
+    "options": [
+      "(a) 4",
+      "(b) 5",
+      "(c) 6",
+      "(d) More than 6"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Sets: (3,5,7), (3,7,11), (5,11,17), (7,13,19). (3,11,19) also shares sum 33 with (5,11,17)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 37,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Algebra",
+    "question": "Number of possible values of p+q+r satisfying 1/p+1/q+1/r=1 (natural numbers)?",
+    "options": [
+      "(a) None",
+      "(b) One",
+      "(c) Three",
+      "(d) More than three"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Solutions: (4,4,2) sum=10, (2,3,6) sum=11, (3,3,3) sum=9."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 38,
+    "subject": "Logical Reasoning",
+    "chapter": "Calendar Series",
+    "question": "Jan, Jan, Dec, Oct, X, March, Oct, Y, Sept. What are X and Y?",
+    "options": [
+      "(a) July, May",
+      "(b) July, April",
+      "(c) June, May",
+      "(d) June, April"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Subtracting 0, 1, 2, 3, 4, 5, 6, 7 months in order: X=July, Y=April."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 39,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Average & Ratio",
+    "question": "Team X scored N in 20 overs. Y tied in 18 overs. Higher avg rate... How many runs?",
+    "options": [
+      "(a) 72",
+      "(b) 144",
+      "(c) 216",
+      "(d) Cannot be determined"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The relationship holds true for any N; insufficient data to find a unique integer."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 40,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Percentage",
+    "question": "Price p increased by k%, decreased by k%... New price q. Relation?",
+    "options": [
+      "(a) p(10^4-k^2)^2 = qx10^8",
+      "(b) p(10^4-k^2)^2 = qx10^4",
+      "(c) p(10^4-k^2) = qx10^4",
+      "(d) p(10^4-k^2) = qx10^8"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Successive percentage change formula applied twice: p * ((100-k)/100)^2 * ((100+k)/100)^2."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 41,
+    "subject": "Reading Comprehension",
+    "chapter": "Economics / Inflation",
+    "question": "Which statement reflects the most logical, rational and crucial message (Passage-1: Inflation)?",
+    "options": [
+      "(a) Must use WPI exclusively...",
+      "(b) Present calculation... does not correctly measure price rise of individual item...",
+      "(c) Inflation data under-presents services...",
+      "(d) Knowledge... not really of any use..."
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage emphasizes that a single aggregate number masks differences in consumption baskets for rich vs poor."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 42,
+    "subject": "Reading Comprehension",
+    "chapter": "Business & Ethics",
+    "question": "Which statement reflects the crux of the passage (Passage-2: Trust)?",
+    "options": [
+      "(a) Trustworthiness cannot be expected...",
+      "(b) Trustworthy people are the most vulnerable...",
+      "(c) No economic activity possible without betrayal...",
+      "(d) Trust is important though it entails risk."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage portrays trust as a 'super-commodity' essential for markets despite vulnerability."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 43,
+    "subject": "Logical Reasoning",
+    "chapter": "Data Sufficiency",
+    "question": "P behind by 3 goals with 10 mins left. Does P win? I. P scores 4. II. Q total scores 4.",
+    "options": [
+      "(a) Statement I alone...",
+      "(b) Either alone...",
+      "(c) Both together...",
+      "(d) Cannot be answered."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Total goals scored by Q in the final 10 mins are unknown; P could have tied or won."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 44,
+    "subject": "Logical Reasoning",
+    "chapter": "Data Sufficiency",
+    "question": "Is (p+q)^2-4pq positive? I. p < q. II. p > q.",
+    "options": [
+      "(a) One alone...",
+      "(b) Either alone...",
+      "(c) Both together...",
+      "(d) Even without using statements."
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Expression simplifies to (p-q)^2. Either p<q or p>q ensures p!=q, making the result positive."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 45,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Ratios",
+    "question": "X, Y, Z total 37 runs. X/Y = Y/Z. Relation between values?",
+    "options": [
+      "(a) I < II < III",
+      "(b) III < II < I",
+      "(c) I < III < II",
+      "(d) Cannot be determined"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Values depend on the integer choice (e.g., 9,12,16 vs 16,12,9); direction of inequality isn't fixed."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 46,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Algebra",
+    "question": "p+q=10. I. Max pxq (positive integers). II. Max pxq (p>=-6, q>=-4).",
+    "options": [
+      "(a) I < II",
+      "(b) II < I",
+      "(c) I = II",
+      "(d) Cannot be determined"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "In both cases, max is achieved at p=5, q=5 (Value=25)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 47,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Statistics / Averages",
+    "question": "I. Min avg of 11 consecutive integers >=-5. II. Min product of 11 consecutive non-negative integers.",
+    "options": [
+      "(a) I < II",
+      "(b) II < I",
+      "(c) I = II",
+      "(d) Cannot be determined"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Value I: Avg of -5 to 5 is 0. Value II: Product including '0' is 0."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 48,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Averages",
+    "question": "Avg of p,q,r is k. p is x more than k, q is x less than k. Value of r?",
+    "options": [
+      "(a) k",
+      "(b) k-1",
+      "(c) k+1",
+      "(d) k/2"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "p and q balance each other out around k, so r must equal k to maintain the average."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 49,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number Properties",
+    "question": "Real number x between 0 and 1. I. x^2 > x^3. II. x > sqrt(x).",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "For fractions < 1, higher powers are smaller (I is true). Sqrt of a fraction is larger than the fraction (II is false)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 50,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Divisibility",
+    "question": "Difference between 2 natural numbers is 10. Numbers divisible by 5 between them?",
+    "options": [
+      "(a) Only one",
+      "(b) Only two",
+      "(c) Can be more than one",
+      "(d) No such number"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Can be one (e.g., between 5 and 15) or two (e.g., between 1 and 11)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 51,
+    "subject": "Reading Comprehension",
+    "chapter": "Capitalism & Democracy",
+    "question": "Which one reflects the critical message (Passage-1: Corporate Capitalism)?",
+    "options": [
+      "(a) Corporate capitalism is important for economic growth... and for democracy.",
+      "(b) Corporate capitalism is imperative... to achieve political objectives.",
+      "(c) No State can ensure economic survival for long without it.",
+      "(d) Corporate capitalism and democracy have mutual dependence."
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage links corporate capitalism to modernization, job generation, and state welfare revenues."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 52,
+    "subject": "Reading Comprehension",
+    "chapter": "Capitalism & Democracy",
+    "question": "Assumptions: I. Promotes growth of labour force... II. Marginalized sections benefited due to trickle-down effect. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage mentions job generation (I) and welfare for the marginalized via state revenues (II)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 53,
+    "subject": "Reading Comprehension",
+    "chapter": "State & Society",
+    "question": "Best explanation of 'Voluntary associations stand as a buffer' (Passage-2)?",
+    "options": [
+      "(a) Inability of State to enforce will...",
+      "(b) Cooperative organization for personality development...",
+      "(c) Takes individuals out of isolation... chance to participate...",
+      "(d) Permits citizens to have a variety of loyalties."
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Associations provide collective protection for the individual against a 'potentially powerful State.'"
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 54,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number System",
+    "question": "I. Natural number +50% has same factors. II. Natural number +150% has same factors.",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Case '2': +50%=3 (factors unchanged). +150%=5 (factors unchanged)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 55,
+    "subject": "Logical Reasoning",
+    "chapter": "Directions",
+    "question": "Map of A-G. A is 6km S of B, 10km W of C... Distance D to F?",
+    "options": [
+      "(a) 20 km",
+      "(b) 25 km",
+      "(c) 31 km",
+      "(d) 37 km"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Route tracing (D-C-A-B-F or D-E-G-F) yields 31 km."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 56,
+    "subject": "Logical Reasoning",
+    "chapter": "Coding-Decoding",
+    "question": "64 coded as 343, 216 as 729. How is 512 written?",
+    "options": [
+      "(a) 1000",
+      "(b) 1331",
+      "(c) 1728",
+      "(d) 2197"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Coded as (root+3)^3: (4+3)^3=343, (6+3)^3=729. (8+3)^3=1331."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 57,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Remainders",
+    "question": "Remainder when 9^3+9^4+...+9^100 is divided by 6?",
+    "options": [
+      "(a) 0",
+      "(b) 1",
+      "(c) 2",
+      "(d) 3"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Each 9^n mod 6 = 3. 98 terms of '3' give 294. 294 mod 6 = 0."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 58,
+    "subject": "Logical Reasoning",
+    "chapter": "Data Sufficiency",
+    "question": "Smallest 1-digit number with 4 factors? I. 2 is a factor. II. 3 is a factor.",
+    "options": [
+      "(a) One alone...",
+      "(b) Either alone...",
+      "(c) Both together...",
+      "(d) Even without using statements."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Number is 6 (factors 1, 2, 3, 6). Recognizable without statements."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 59,
+    "subject": "Logical Reasoning",
+    "chapter": "Data Sufficiency",
+    "question": "PPxPQ=RRSS. P<=3, Q<=4. Value of Q? I. R=1. II. S=2.",
+    "options": [
+      "(a) One alone...",
+      "(b) Either alone...",
+      "(c) Both together...",
+      "(d) Even without using statements."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Only 33x34=1122 fits the RRSS format. Q=4 determined without statements."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 60,
+    "subject": "Logical Reasoning",
+    "chapter": "Data Sufficiency",
+    "question": "Q relation to P? I. P has sisters R, S. II. R's father is brother of Q.",
+    "options": [
+      "(a) One alone...",
+      "(b) Either alone...",
+      "(c) Both together...",
+      "(d) Cannot be answered."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Genders of P and Q are unknown; Q could be uncle/aunt, P could be nephew/niece."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 61,
+    "subject": "Reading Comprehension",
+    "chapter": "Agriculture & Genetics",
+    "question": "Which one reflects the central idea (Passage-1: Crop diseases)?",
+    "options": [
+      "(a) Climate change adversely affects productivity...",
+      "(b) Total dependence on genetically honed crops entails food insecurity.",
+      "(c) Food security should not depend on productivity alone.",
+      "(d) Genetically honed crops should be replaced with wild varieties."
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Selective breeding has 'bred out' genetic variations, making high-value crops vulnerable to unknown rampaging diseases."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 62,
+    "subject": "Reading Comprehension",
+    "chapter": "Agriculture & Genetics",
+    "question": "Assumptions: I. Climate change can result in migration of diseases... II. Understanding wild relatives would enable us to strengthen food security. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage warns of infections becoming common in 'all climatic zones' (I) and identifies the lack of genetic variation (bred from wild relatives) as the risk (II)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 63,
+    "subject": "Reading Comprehension",
+    "chapter": "Governance & Politics",
+    "question": "Which one reflects the critical message (Passage-2: Opposition)?",
+    "options": [
+      "(a) Without opposition, administration becomes more responsible.",
+      "(b) Democracy needs revolutionaries...",
+      "(c) Rulers need support of opposition for survival.",
+      "(d) In a democracy, the opposition is indispensable for balance of power..."
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "The passage argues opponents keep leaders on the 'path of reason' and prevent arbitrary administration."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 64,
+    "subject": "Reading Comprehension",
+    "chapter": "Governance & Politics",
+    "question": "Assumptions: I. Strong opposition required only if Head is indifferent. II. More aggressive the opposition, better the governance. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage says opposition is always needed for balance (refutes I) and warns against 'revolutionary and irreconcilable' opposition (refutes II)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 65,
+    "subject": "Logical Reasoning",
+    "chapter": "Blood Relations",
+    "question": "P brother of Q, R. S is R's mother. T is P's father. How many definitely true?",
+    "options": [
+      "(a) Only two",
+      "(b) Only three",
+      "(c) Only four",
+      "(d) Only five"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "True: S&T couple, T is Q's father, S is P's mother, P is S's son. Q/R genders unknown."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 66,
+    "subject": "Logical Reasoning",
+    "chapter": "Coding-Decoding",
+    "question": "NO=210, NOT=4200, NOTE=21000. How is NOTES coded?",
+    "options": [
+      "(a) 399000",
+      "(b) 420000",
+      "(c) 440000",
+      "(d) 630000"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Product of alphabetic place values: 14x15x20x5x19 = 399000."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 67,
+    "subject": "Logical Reasoning",
+    "chapter": "Coding-Decoding",
+    "question": "FRANCE=654321, GERMANY=9158437. How is YEMEN coded?",
+    "options": [
+      "(a) 54321",
+      "(b) 81913",
+      "(c) 71913",
+      "(d) 71813"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Direct mapping: Y=7, E=1, M=8, E=1, N=3."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 68,
+    "subject": "Logical Reasoning",
+    "chapter": "Number Puzzles",
+    "question": "5-digit PQRST. P=3T, T!=0. S=Q+4, Q=R+3. How many possible numbers?",
+    "options": [
+      "(a) 3",
+      "(b) 4",
+      "(c) 5",
+      "(d) 6"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Constraints (T=1,2,3) and digit uniqueness lead to 4 possible numbers."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 69,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Work & Time",
+    "question": "X: 1/3 work in 6d, Y: 1/3 in 8d, Z: 3/4 in 12d. Together n days... Y finishes rest. n=?",
+    "options": [
+      "(a) 3",
+      "(b) 4",
+      "(c) 5",
+      "(d) 6"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Efficiencies (X:8, Y:6, Z:9) on 144 units. Together time calculation results in n=4."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 70,
+    "subject": "Logical Reasoning",
+    "chapter": "Number Series",
+    "question": "1, 3, 6, 11, 18, X, 42. Value of X?",
+    "options": [
+      "(a) 26",
+      "(b) 27",
+      "(c) 29",
+      "(d) 30"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Differences are prime numbers: +2, +3, +5, +7, +11, +13. 18+11=29."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 71,
+    "subject": "Reading Comprehension",
+    "chapter": "Climate & Policy",
+    "question": "Which one reflects the central idea (Passage-1: Net-zero)?",
+    "options": [
+      "(a) Possible only by reduction in household emissions.",
+      "(b) Low-carbon behaviour... can be brought about by incentivising.",
+      "(c) Cheaper goods... available by using low-carbon technologies.",
+      "(d) Manufacturing industries... should be provided with subsidies."
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage emphasizes that achieving behavioral changes requires 'incentives to change' from companies and governments."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 72,
+    "subject": "Reading Comprehension",
+    "chapter": "Climate & Policy",
+    "question": "Assumptions: I. Supply-side investments... result in low-carbon behaviour. II. People not capable... without involvement. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage explicitly links supply-side investment to behavioral change incentives. II is too broad."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 73,
+    "subject": "Reading Comprehension",
+    "chapter": "Circular Economy",
+    "question": "Which statement reflects the most logical, rational and pragmatic message (Passage-2)?",
+    "options": [
+      "(a) Green economy is not possible without reusing...",
+      "(b) Every sector should adapt... immediately.",
+      "(c) Circular economy can be beneficial for sustainable growth.",
+      "(d) Circular use... only option for survival."
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Passage argues 'reusing materials makes sense' to mitigate supply chain and environmental risks."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 74,
+    "subject": "Reading Comprehension",
+    "chapter": "Circular Economy",
+    "question": "Assumptions: I. Automobile factories are examples... II. Economic growth is compatible with circular use. Which is valid?",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "B",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Current low reuse rates (refutes I) contrast with the argument that reuse helps sustain growth (supports II)."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 75,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Pipes & Cisterns",
+    "question": "X(20): 70% in 14m. Y(10): 3/8 in 6m. Z(16): empty 50% in 20m. 1/2X, 1/2Y, 1Z work. Fill 50%?",
+    "options": [
+      "(a) 8 minutes",
+      "(b) 10 minutes",
+      "(c) 12 minutes",
+      "(d) 16 minutes"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "X and Z effectively cancel out; result depends on Y's rate. 16 minutes to fill 50%."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 76,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Remainders",
+    "question": "Natural number n. Number of distinct remainders of (1^n+2^n) when divided by 4?",
+    "options": [
+      "(a) 0",
+      "(b) 1",
+      "(c) 2",
+      "(d) 3"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "n=1 results in remainder 3; n>=2 results in remainder 1. Two distinct possible remainders."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 77,
+    "subject": "Quantitative Aptitude",
+    "chapter": "LCM & HCF",
+    "question": "P=QQQ 3-digit number. HCF of P and 481?",
+    "options": [
+      "(a) 1",
+      "(b) 13",
+      "(c) 37",
+      "(d) 481"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "QQQ = Qx3x37. 481 = 13x37. Common factor is 37."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 78,
+    "subject": "Quantitative Aptitude",
+    "chapter": "Number Properties",
+    "question": "489th digit in number 123456789101112...?",
+    "options": [
+      "(a) 0",
+      "(b) 3",
+      "(c) 6",
+      "(d) 9"
+    ],
+    "answer": "D",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Calculation through 1-digit and 2-digit numbers leads to the 199 sequence."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 79,
+    "subject": "Logical Reasoning",
+    "chapter": "Puzzles",
+    "question": "3 suspects P, Q, R. One guilty (liar). Who stole phone?",
+    "options": [
+      "(a) P",
+      "(b) R",
+      "(c) Q",
+      "(d) Cannot be concluded"
+    ],
+    "answer": "A",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "If P stole (lying), Q and R's statements are logically consistent and true."
+  },
+  {
+    "year": 2025,
+    "paperType": "csat",
+    "paperNumber": 2,
+    "questionNumber": 80,
+    "subject": "Logical Reasoning",
+    "chapter": "Puzzles",
+    "question": "Football teams P, Q, R points 3, 2, 1. I. P vs Q draw 0-0. II. R scores 1 against Q.",
+    "options": [
+      "(a) I only",
+      "(b) II only",
+      "(c) Both I and II",
+      "(d) Neither I nor II"
+    ],
+    "answer": "C",
+    "sourceName": "UPSC Prelims 2025 CSAT",
+    "explanation": "Scoring 1 goal each. P must have beat R 1-0. Draws 0-0 and 1-1 follow logically."
+  }
+]

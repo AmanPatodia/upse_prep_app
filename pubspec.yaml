@@ -32,3 +32,21 @@ flutter:
   uses-material-design: true
   assets:
     - assets/branding/
+    - assets/data/
+    - assets/data/pyq/
+    - assets/data/pyq/index.json
+    - assets/data/pyq/gs/2025_gs.json
+    - assets/data/pyq/gs/2024_gs.json
+    - assets/data/pyq/gs/2023_gs.json
+    - assets/data/pyq/gs/2022_gs.json
+    - assets/data/pyq/gs/2021_gs.json
+    - assets/data/pyq/gs/2020_gs.json
+    - assets/data/pyq/gs/2019_gs.json
+    - assets/data/pyq/gs/2018_gs.json
+    - assets/data/pyq/gs/2017_gs.json
+    - assets/data/pyq/gs/2016_gs.json
+    - assets/data/pyq/gs/2015_gs.json
+    - assets/data/pyq/gs/2014_gs.json
+    - assets/data/pyq/gs/2013_gs.json
+    - assets/data/pyq/gs/2012_gs.json
+    - assets/data/pyq/csat/2025_csat.json

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../shared/widgets/common_widgets.dart';
+import '../domain/pyq_models.dart';
 import 'bloc/pyq_home_cubit.dart';
 import 'bloc/pyq_test_cubit.dart';
 
@@ -48,20 +49,17 @@ class _PyqScreenState extends State<PyqScreen> {
                 ),
               ),
               const SizedBox(height: 8),
-              ...state.tests.map(
-                (test) => Card(
-                  child: ListTile(
-                    title: Text(test.title),
-                    subtitle: Text(
-                      '${test.questionCount} questions • ${(test.durationSeconds / 60).toStringAsFixed(0)} mins\nType: ${test.paperType.name.toUpperCase()} • Source: ${test.sourceName}',
-                    ),
-                    trailing: const Icon(Icons.play_arrow_outlined),
-                    onTap: () {
-                      context.read<PyqTestCubit>().reset();
-                      context.push('/pyq/test/${test.testId}');
-                    },
-                  ),
-                ),
+              const SectionHeader(title: 'GS Papers'),
+              ..._buildTestCards(
+                tests: state.tests
+                    .where((test) => test.paperType == PyqPaperType.gs)
+                    .toList(growable: false),
+              ),
+              const SectionHeader(title: 'CSAT Papers'),
+              ..._buildTestCards(
+                tests: state.tests
+                    .where((test) => test.paperType == PyqPaperType.csat)
+                    .toList(growable: false),
               ),
               if (state.history.isEmpty)
                 const MetricCard(
@@ -127,5 +125,38 @@ class _PyqScreenState extends State<PyqScreen> {
         );
       },
     );
+  }
+
+  List<Widget> _buildTestCards({required List<PyqTestCatalogItem> tests}) {
+    if (tests.isEmpty) {
+      return const [
+        Card(
+          child: ListTile(
+            title: Text('No papers available'),
+            subtitle: Text('New papers will appear here when added.'),
+          ),
+        ),
+      ];
+    }
+
+    return tests
+        .map(
+          (test) => Card(
+            child: ListTile(
+              title: Text(test.title),
+              subtitle: Text(
+                '${test.questionCount} questions • ${(test.durationSeconds / 60).toStringAsFixed(0)} mins\n'
+                'Source: ${test.sourceName}\n'
+                'Answer Key: ${test.isOfficialAnswerKey ? 'Official' : 'Expert (Unofficial)'}',
+              ),
+              trailing: const Icon(Icons.play_arrow_outlined),
+              onTap: () {
+                context.read<PyqTestCubit>().reset();
+                context.push('/pyq/test/${test.testId}');
+              },
+            ),
+          ),
+        )
+        .toList(growable: false);
   }
 }
