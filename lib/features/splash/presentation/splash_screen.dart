@@ -1,7 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive/hive.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../auth/presentation/bloc/auth_cubit.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -36,9 +40,25 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    _timer = Timer(const Duration(seconds: 2), () {
+    _timer = Timer(const Duration(seconds: 2), () async {
       if (!mounted) return;
-      context.go('/dashboard');
+      final authCubit = context.read<AuthCubit>();
+      await authCubit.restoreCompleted;
+      if (!mounted) return;
+      final isLoggedIn = authCubit.state.isLoggedIn;
+      final seenOnboarding =
+          Hive.box(AppConstants.settingsBox).get(
+            AppConstants.onboardingSeenKey,
+            defaultValue: false,
+          ) ==
+          true;
+      if (isLoggedIn) {
+        context.go('/dashboard');
+      } else if (seenOnboarding) {
+        context.go('/login');
+      } else {
+        context.go('/onboarding');
+      }
     });
   }
 

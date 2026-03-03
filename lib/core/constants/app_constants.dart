@@ -9,4 +9,5 @@ class AppConstants {
   static const bookmarksBox = 'bookmarks_box';
   static const settingsBox = 'settings_box';
   static const authBox = 'auth_box';
+  static const onboardingSeenKey = 'onboarding_seen';
 }

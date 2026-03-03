@@ -13,6 +13,7 @@ import '../features/mains/presentation/mains_overview_screen.dart';
 import '../features/mcq/presentation/mcq_practice_screen.dart';
 import '../features/mcq/presentation/mock_test_screen.dart';
 import '../features/news/presentation/news_screen.dart';
+import '../features/onboarding/presentation/onboarding_flow_screen.dart';
 import '../features/prelims/presentation/prelims_overview_screen.dart';
 import '../features/pyq/presentation/pyq_result_screen.dart';
 import '../features/pyq/presentation/pyq_screen.dart';
@@ -31,6 +32,7 @@ GoRouter createAppRouter({required AuthCubit authCubit}) {
       final isLoggedIn = authCubit.state.isLoggedIn;
       final isAuthRoute =
           state.matchedLocation == '/splash' ||
+          state.matchedLocation == '/onboarding' ||
           state.matchedLocation == '/login' ||
           state.matchedLocation == '/signup';
 
@@ -50,6 +52,14 @@ GoRouter createAppRouter({required AuthCubit authCubit}) {
         pageBuilder:
             (context, state) =>
                 _buildTransitionPage(state: state, child: const SplashScreen()),
+      ),
+      GoRoute(
+        path: '/onboarding',
+        pageBuilder:
+            (context, state) => _buildTransitionPage(
+              state: state,
+              child: const OnboardingFlowScreen(),
+            ),
       ),
       GoRoute(
         path: '/login',

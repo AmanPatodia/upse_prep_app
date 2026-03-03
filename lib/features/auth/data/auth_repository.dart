@@ -17,10 +17,14 @@ abstract class AuthRepository {
     required String password,
   });
   Future<bool> userExists(String identifier);
+  Future<AppUser?> restoreSession();
+  Future<void> clearSession();
 }
 
 class HiveAuthRepository implements AuthRepository {
   static const _passwordSalt = 'upsc_prep_private_salt_v1';
+  static const _sessionKey = '__active_session__';
+  static const _sessionTtl = Duration(hours: 6);
 
   final _emailRegex = RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$');
 
@@ -178,10 +182,12 @@ class HiveAuthRepository implements AuthRepository {
     }
 
     Map<dynamic, dynamic>? rawMap;
+    String? matchedKey;
     for (final key in _candidateKeys(identifier)) {
       final raw = _box.get(key);
       if (raw is Map) {
         rawMap = raw;
+        matchedKey = key;
         break;
       }
     }
@@ -197,6 +203,13 @@ class HiveAuthRepository implements AuthRepository {
       return null;
     }
 
+    final sessionValue = user.identifier.isNotEmpty
+        ? user.identifier
+        : (matchedKey ?? normalized.normalized);
+    await _box.put(_sessionKey, {
+      'identifier': sessionValue,
+      'loginAt': DateTime.now().toIso8601String(),
+    });
     return user;
   }
 
@@ -206,5 +219,52 @@ class HiveAuthRepository implements AuthRepository {
       if (_box.containsKey(key)) return true;
     }
     return false;
+  }
+
+  @override
+  Future<AppUser?> restoreSession() async {
+    final stored = _box.get(_sessionKey);
+    if (stored == null) {
+      return null;
+    }
+
+    String? sessionIdentifier;
+    DateTime? loginAt;
+
+    if (stored is String && stored.trim().isNotEmpty) {
+      // Legacy session format; expire it to enforce TTL behavior.
+      await clearSession();
+      return null;
+    }
+
+    if (stored is Map) {
+      sessionIdentifier = (stored['identifier'] as String?)?.trim();
+      loginAt = DateTime.tryParse((stored['loginAt'] as String?) ?? '');
+    }
+
+    if (sessionIdentifier == null || sessionIdentifier.isEmpty || loginAt == null) {
+      await clearSession();
+      return null;
+    }
+
+    if (DateTime.now().difference(loginAt) > _sessionTtl) {
+      await clearSession();
+      return null;
+    }
+
+    for (final key in _candidateKeys(sessionIdentifier)) {
+      final raw = _box.get(key);
+      if (raw is! Map) continue;
+      return AppUser.fromMap(raw.cast<String, dynamic>());
+    }
+
+    return null;
+  }
+
+  @override
+  Future<void> clearSession() async {
+    await _box.delete(_sessionKey);
+    final settingsBox = Hive.box(AppConstants.settingsBox);
+    await settingsBox.put(AppConstants.onboardingSeenKey, false);
   }
 }

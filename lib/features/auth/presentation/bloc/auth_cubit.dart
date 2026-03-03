@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'dart:async';
 
 import '../../data/auth_repository.dart';
 import '../../domain/auth_models.dart';
@@ -26,9 +27,26 @@ class AuthState {
 }
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit(this._authRepository) : super(const AuthState());
+  AuthCubit(this._authRepository) : super(const AuthState()) {
+    _restoreSession();
+  }
 
   final AuthRepository _authRepository;
+  final Completer<void> _restoreCompleter = Completer<void>();
+  Future<void> get restoreCompleted => _restoreCompleter.future;
+
+  Future<void> _restoreSession() async {
+    try {
+      final user = await _authRepository.restoreSession();
+      if (user != null) {
+        emit(AuthState(currentUser: user, isBusy: false));
+      }
+    } finally {
+      if (!_restoreCompleter.isCompleted) {
+        _restoreCompleter.complete();
+      }
+    }
+  }
 
   Future<bool> login({
     required String identifier,
@@ -74,7 +92,8 @@ class AuthCubit extends Cubit<AuthState> {
     return null;
   }
 
-  void logout() {
+  Future<void> logout() async {
+    await _authRepository.clearSession();
     emit(const AuthState());
   }
 }
