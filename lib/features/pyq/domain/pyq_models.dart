@@ -67,7 +67,10 @@ class PyqQuestion {
       question: map['question'] as String? ?? '',
       options: (map['options'] as List<dynamic>? ?? []).cast<String>(),
       correctIndex: map['correctIndex'] as int? ?? 0,
-      explanation: map['explanation'] as String? ?? '',
+      explanation:
+          (map['explanation'] as String?)?.trim().isNotEmpty == true
+              ? (map['explanation'] as String).trim()
+              : 'Detailed explanation will be added soon.',
       topicTag: map['topicTag'] as String? ?? '',
       difficulty: Difficulty.values.firstWhere(
         (d) => d.name == (map['difficulty'] as String? ?? 'medium'),
@@ -141,7 +144,10 @@ class PyqQuestionReview {
       question: map['question'] as String? ?? '',
       options: (map['options'] as List<dynamic>? ?? []).cast<String>(),
       correctIndex: map['correctIndex'] as int? ?? 0,
-      explanation: map['explanation'] as String? ?? '',
+      explanation:
+          (map['explanation'] as String?)?.trim().isNotEmpty == true
+              ? (map['explanation'] as String).trim()
+              : 'Detailed explanation will be added soon.',
       selectedIndex: map['selectedIndex'] as int?,
     );
   }

@@ -111,8 +111,26 @@ class PyqResultScreen extends StatelessWidget {
                         'Your answer: ${review.selectedIndex == null ? 'Not attempted' : _option(review.selectedIndex!)}',
                       ),
                       Text('Correct answer: ${_option(review.correctIndex)}'),
-                      const SizedBox(height: 6),
-                      Text('Explanation: ${review.explanation}'),
+                      const SizedBox(height: 8),
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.surfaceContainer,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Explanation',
+                              style: Theme.of(context).textTheme.labelLarge,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(review.explanation),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
