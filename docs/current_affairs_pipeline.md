@@ -1,77 +1,40 @@
-# Current Affairs Auto-Update Pipeline
+# Current Affairs Data Flow (Firestore Only)
 
-## Recommended Architecture
-1. `Scraper job` (Python) runs every 6 hours.
-2. Job ingests RSS feeds from UPSC sources and normalizes records.
-3. Normalized data is pushed to your backend endpoint.
-4. Backend stores items in DB and serves API.
-5. Flutter app fetches from API with offline fallback.
+## Source of truth
+- Firestore collection: `current_affairs`
+- Manual entry by admin in Firebase Console
 
-## Why this is better
-- No scraping from mobile app.
-- Centralized cleaning/tagging.
-- Easy retries and monitoring.
-- Lower app latency and better reliability.
+## App behavior
+1. App reads Firestore items ordered by `date` (latest first).
+2. App stores fetched items in Hive cache (`current_affairs_box`).
+3. On next app open:
+   - If cache is fresh, app shows Hive data immediately.
+   - If cache is stale, app refreshes from Firestore and updates Hive.
+   - If Firestore fails, app falls back to Hive cache.
 
-## Script included
-Use:
-- `tools/current_affairs/rss_ingest.py`
-- `tools/current_affairs/requirements.txt`
+## Required Firestore fields per document
+- `id` (string; optional, doc id used if missing)
+- `title` (string)
+- `date` (Timestamp)
+- `summary` or `inBrief` (string)
+- `facts` or `keyPoints` (array of string)
+- `tags` (array of string)
+- `sourceName` (string)
+- `sourceUrl` (string)
 
-Run locally:
+## JSON ingest helper
+You can ingest from:
+- A single JSON object (one topic)
+- A JSON array (multiple topics for a day)
+
+Command:
 ```bash
-pip install -r tools/current_affairs/requirements.txt
-python tools/current_affairs/rss_ingest.py --out /tmp/current_affairs.json
+python tools/current_affairs/firestore_ingest.py \
+  --service-account /absolute/path/to/firebase-service-account.json \
+  --from-json /absolute/path/to/current_affairs.json
 ```
 
-Push to backend:
+## Run command
 ```bash
-python tools/current_affairs/rss_ingest.py \
-  --api-base https://your-api.example.com \
-  --api-key YOUR_SECRET_TOKEN
+flutter run --dart-define=ENABLE_FIRESTORE_CURRENT_AFFAIRS=true
 ```
-
-## API Contract (Backend)
-### Ingest endpoint
-- `POST /ingest/current-affairs`
-- Header: `Authorization: Bearer <token>`
-- Body:
-```json
-{
-  "items": [
-    {
-      "id": "string",
-      "title": "string",
-      "summary": "string",
-      "date": "ISO8601",
-      "tags": ["Economy"],
-      "facts": ["fact1", "fact2"],
-      "sourceName": "Insights IAS",
-      "sourceUrl": "https://..."
-    }
-  ]
-}
-```
-
-### App fetch endpoint
-- `GET /current-affairs/daily`
-- Response:
-```json
-[
-  {
-    "id": "string",
-    "title": "string",
-    "summary": "string",
-    "date": "ISO8601",
-    "tags": ["Polity"],
-    "facts": ["..."]
-  }
-]
-```
-
-## Flutter Integration
-App supports remote fetch via Dart define:
-```bash
-flutter run --dart-define=CURRENT_AFFAIRS_API_BASE_URL=https://your-api.example.com
-```
-If API fails, app falls back to local demo data.

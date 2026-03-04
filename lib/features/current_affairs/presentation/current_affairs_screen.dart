@@ -123,6 +123,16 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
                   'Offline cache enabled • Monthly compilation generated on sync.',
                 ),
               ),
+              if (state.syncStatus != null)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  child: Text(
+                    state.syncStatus!,
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -284,6 +294,9 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
       fontSize: (body.fontSize ?? 14) * prefs.fontScale,
       height: prefs.lineHeight,
     );
+    final shortSummary = _shorten(effective.summary, maxChars: 220);
+    final topTags = effective.tags.take(4).toList(growable: false);
+    final topFacts = effective.facts.take(3).toList(growable: false);
 
     return Card(
       child: Padding(
@@ -308,16 +321,22 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
               style: Theme.of(context).textTheme.bodySmall,
             ),
             const SizedBox(height: 8),
-            Text(effective.summary, style: scaledBody),
+            Text('In Brief', style: Theme.of(context).textTheme.labelLarge),
+            const SizedBox(height: 4),
+            Text(shortSummary, style: scaledBody),
             const SizedBox(height: 8),
             Wrap(
               spacing: 8,
-              children: effective.tags
+              children: topTags
                   .map((tag) => Chip(label: Text(tag)))
                   .toList(growable: false),
             ),
-            const SizedBox(height: 8),
-            ...effective.facts.map((fact) => Text('• $fact', style: scaledBody)),
+            if (topFacts.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text('Key Points', style: Theme.of(context).textTheme.labelLarge),
+              const SizedBox(height: 4),
+              ...topFacts.map((fact) => Text('• $fact', style: scaledBody)),
+            ],
             Row(
               children: [
                 TextButton.icon(
@@ -350,6 +369,12 @@ class _CurrentAffairsScreenState extends State<CurrentAffairsScreen> {
         ),
       ),
     );
+  }
+
+  String _shorten(String text, {required int maxChars}) {
+    final clean = text.replaceAll(RegExp(r'\s+'), ' ').trim();
+    if (clean.length <= maxChars) return clean;
+    return '${clean.substring(0, maxChars).trimRight()}...';
   }
 }
 

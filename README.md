@@ -15,6 +15,33 @@ flutter run
 
 Entry route is `/login`, then dashboard with modular navigation.
 
+## Firestore Setup
+
+This app now supports:
+- Firestore for dynamic content (`current_affairs` collection)
+- Local bundled PYQ data (offline-first)
+- Automatic fallback to local repositories when remote sources fail
+
+Use `--dart-define` values to enable production data.
+
+If `android/app/google-services.json` (and/or iOS `GoogleService-Info.plist`) is present, you only need:
+
+```bash
+flutter run --dart-define=ENABLE_FIRESTORE_CURRENT_AFFAIRS=true
+```
+
+If you prefer runtime env configuration without native config files, use:
+
+```bash
+flutter run \
+  --dart-define=ENABLE_FIRESTORE_CURRENT_AFFAIRS=true \
+  --dart-define=FIREBASE_API_KEY=... \
+  --dart-define=FIREBASE_APP_ID=... \
+  --dart-define=FIREBASE_MESSAGING_SENDER_ID=... \
+  --dart-define=FIREBASE_PROJECT_ID=... \
+  --dart-define=FIREBASE_STORAGE_BUCKET=...
+```
+
 ## Implemented Starter Modules
 
 - Authentication (private login shell)

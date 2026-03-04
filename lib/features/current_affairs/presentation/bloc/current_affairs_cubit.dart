@@ -9,21 +9,25 @@ class CurrentAffairsState {
     this.isLoading = false,
     this.items = const [],
     this.error,
+    this.syncStatus,
   });
 
   final bool isLoading;
   final List<CurrentAffairItem> items;
   final String? error;
+  final String? syncStatus;
 
   CurrentAffairsState copyWith({
     bool? isLoading,
     List<CurrentAffairItem>? items,
     String? error,
+    String? syncStatus,
   }) {
     return CurrentAffairsState(
       isLoading: isLoading ?? this.isLoading,
       items: items ?? this.items,
       error: error,
+      syncStatus: syncStatus ?? this.syncStatus,
     );
   }
 }
@@ -37,19 +41,34 @@ class CurrentAffairsCubit extends Cubit<CurrentAffairsState> {
     AppLogger.info('CurrentAffairsCubit', 'Loading current affairs...');
     emit(state.copyWith(isLoading: true, error: null));
     try {
-      final items = await _repository.getDailyItems();
+      final result = await _repository.getDailyItems();
+      final syncStatus = result.source == CurrentAffairsDataSource.firestore
+          ? 'Updated from Firestore'
+          : 'Loaded from Hive cache';
       AppLogger.info(
         'CurrentAffairsCubit',
-        'Loaded ${items.length} current affairs items',
+        'Loaded ${result.items.length} current affairs items',
       );
-      emit(state.copyWith(isLoading: false, items: items));
+      emit(
+        state.copyWith(
+          isLoading: false,
+          items: result.items,
+          syncStatus: syncStatus,
+        ),
+      );
     } catch (e) {
       AppLogger.error(
         'CurrentAffairsCubit',
         'Failed to load current affairs',
         error: e,
       );
-      emit(state.copyWith(isLoading: false, error: e.toString()));
+      emit(
+        state.copyWith(
+          isLoading: false,
+          error: e.toString(),
+          syncStatus: state.syncStatus ?? 'Sync failed',
+        ),
+      );
     }
   }
 
